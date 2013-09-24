@@ -4,17 +4,25 @@
 $this->pageTitle=Yii::app()->name;
 ?>
 
-<h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
+<?php echo CHtml::link("Check In");?>
 
-<p>Congratulations! You have successfully created your Yii application.</p>
+ <h1><?php echo "Route:";?></h1>
 
-<p>You may change the content of this page by modifying the following two files:</p>
-<ul>
-	<li>View file: <code><?php echo __FILE__; ?></code></li>
-	<li>Layout file: <code><?php echo $this->getLayoutFile('main'); ?></code></li>
-</ul>
+<?php 
 
-<p>For more details on how to further develop this application, please read
-the <a href="http://www.yiiframework.com/doc/">documentation</a>.
-Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
-should you have any questions.</p>
+$criteria=new CDbCriteria;
+		$criteria->condition='status=:status';
+		$criteria->params=array(':status'=>1);
+		
+		$models=  BusRoute::model()->findAll($criteria);
+                
+		 
+// retrieve the models from db
+$models = BusRoute::model()->findAll();
+ 
+// format models as $key=>$value with listData
+$list = CHtml::listData($models,'id', 'route_name');
+ echo CHtml::dropDownList('route', "routename", 
+              $list,
+              array('empty' => '(Select a category'));
+?>

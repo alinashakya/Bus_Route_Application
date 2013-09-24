@@ -26,17 +26,18 @@
                 <div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
             </div><!-- header -->
 
-            <div id="mainmenu">
+            <?php if (!(Yii::app()->user->isGuest)): ?>
+                <div id="mainmenu">
 
-            </div><!-- mainmenu -->
-
+                </div><!-- mainmenu -->
+            <?php endif; ?>
             <div id="content">
-                Content Goes Here
+                <?php echo $content; ?>
             </div>
 
             <div class="clear"></div>
 
-            
+
 
         </div><!-- page -->
 
