@@ -1,0 +1,288 @@
+2013/09/24 09:46:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "about" was not found.' in /var/www/Bus_Route_App/framework/web/actions/CViewAction.php:112
+Stack trace:
+#0 /var/www/Bus_Route_App/framework/web/actions/CViewAction.php(123): CViewAction->resolveView('about')
+#1 /var/www/Bus_Route_App/framework/web/actions/CAction.php(76): CViewAction->run()
+#2 /var/www/Bus_Route_App/framework/web/CController.php(308): CAction->runWithParams(Array)
+#3 /var/www/Bus_Route_App/framework/web/CController.php(286): CController->runAction(Object(CViewAction))
+#4 /var/www/Bus_Route_App/framework/web/CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /var/www/Bus_Route_App/framework/web/CWebApplication.php(282): CController->run('page')
+#6 /var/www/Bus_Route_App/framework/web/CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 /var/www/Bus_Route_App/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/Bus_Route_App/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/Bus_Route_App/index.php/site/page?view=about
+HTTP_REFERER=http://localhost/Bus_Route_App/
+---
+2013/09/24 09:46:40 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "contact".' in /var/www/Bus_Route_App/framework/web/CController.php:878
+Stack trace:
+#0 /var/www/Bus_Route_App/framework/web/CController.php(782): CController->renderPartial('contact', Array, true)
+#1 /var/www/Bus_Route_App/protected/controllers/SiteController.php(72): CController->render('contact', Array)
+#2 /var/www/Bus_Route_App/framework/web/actions/CInlineAction.php(49): SiteController->actionContact()
+#3 /var/www/Bus_Route_App/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www/Bus_Route_App/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www/Bus_Route_App/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www/Bus_Route_App/framework/web/CWebApplication.php(282): CController->run('contact')
+#7 /var/www/Bus_Route_App/framework/web/CWebApplication.php(141): CWebApplication->runController('site/contact')
+#8 /var/www/Bus_Route_App/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#9 /var/www/Bus_Route_App/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/Bus_Route_App/index.php/site/contact
+HTTP_REFERER=http://localhost/Bus_Route_App/index.php/site/page?view=about
+---
+2013/09/24 09:47:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "contact".' in /var/www/Bus_Route_App/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_App/framework/web/CController.php(270): CController->missingAction('contact')
+#1 /var/www/Bus_Route_App/framework/web/CWebApplication.php(282): CController->run('contact')
+#2 /var/www/Bus_Route_App/framework/web/CWebApplication.php(141): CWebApplication->runController('site/contact')
+#3 /var/www/Bus_Route_App/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_App/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_App/index.php/site/contact
+HTTP_REFERER=http://localhost/Bus_Route_App/index.php/site/page?view=about
+---
+2013/09/24 09:47:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "about" was not found.' in /var/www/Bus_Route_App/framework/web/actions/CViewAction.php:112
+Stack trace:
+#0 /var/www/Bus_Route_App/framework/web/actions/CViewAction.php(123): CViewAction->resolveView('about')
+#1 /var/www/Bus_Route_App/framework/web/actions/CAction.php(76): CViewAction->run()
+#2 /var/www/Bus_Route_App/framework/web/CController.php(308): CAction->runWithParams(Array)
+#3 /var/www/Bus_Route_App/framework/web/CController.php(286): CController->runAction(Object(CViewAction))
+#4 /var/www/Bus_Route_App/framework/web/CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /var/www/Bus_Route_App/framework/web/CWebApplication.php(282): CController->run('page')
+#6 /var/www/Bus_Route_App/framework/web/CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 /var/www/Bus_Route_App/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /var/www/Bus_Route_App/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/Bus_Route_App/index.php/site/page?view=about
+HTTP_REFERER=http://localhost/Bus_Route_App/index.php/site/index
+---
+2013/09/24 09:47:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "contact".' in /var/www/Bus_Route_App/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_App/framework/web/CController.php(270): CController->missingAction('contact')
+#1 /var/www/Bus_Route_App/framework/web/CWebApplication.php(282): CController->run('contact')
+#2 /var/www/Bus_Route_App/framework/web/CWebApplication.php(141): CWebApplication->runController('site/contact')
+#3 /var/www/Bus_Route_App/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_App/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_App/index.php/site/contact
+HTTP_REFERER=http://localhost/Bus_Route_App/index.php/site/page?view=about
+---
+2013/09/24 09:47:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /var/www/Bus_Route_App/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_App/framework/web/CController.php(270): CController->missingAction('login')
+#1 /var/www/Bus_Route_App/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /var/www/Bus_Route_App/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 /var/www/Bus_Route_App/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_App/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_App/index.php/site/login
+HTTP_REFERER=http://localhost/Bus_Route_App/index.php/site/contact
+---
+2013/09/24 09:48:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /var/www/Bus_Route_App/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_App/framework/web/CController.php(270): CController->missingAction('login')
+#1 /var/www/Bus_Route_App/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /var/www/Bus_Route_App/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 /var/www/Bus_Route_App/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_App/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_App/index.php/site/login
+HTTP_REFERER=http://localhost/Bus_Route_App/index.php/site/contact
+---
+2013/09/24 09:49:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /var/www/Bus_Route_App/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_App/framework/web/CController.php(270): CController->missingAction('login')
+#1 /var/www/Bus_Route_App/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /var/www/Bus_Route_App/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 /var/www/Bus_Route_App/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_App/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_App/index.php/site/login
+HTTP_REFERER=http://localhost/Bus_Route_App/index.php/site/contact
+---
+2013/09/24 09:49:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /var/www/Bus_Route_App/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_App/framework/web/CController.php(270): CController->missingAction('login')
+#1 /var/www/Bus_Route_App/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /var/www/Bus_Route_App/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 /var/www/Bus_Route_App/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_App/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_App/index.php/site/login
+HTTP_REFERER=http://localhost/Bus_Route_App/index.php/site/contact
+---
+2013/09/24 09:50:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /var/www/Bus_Route_App/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_App/framework/web/CController.php(270): CController->missingAction('login')
+#1 /var/www/Bus_Route_App/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /var/www/Bus_Route_App/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 /var/www/Bus_Route_App/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_App/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_App/index.php/site/login
+HTTP_REFERER=http://localhost/Bus_Route_App/index.php/site/contact
+---
+2013/09/24 09:50:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /var/www/Bus_Route_App/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_App/framework/web/CController.php(270): CController->missingAction('login')
+#1 /var/www/Bus_Route_App/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /var/www/Bus_Route_App/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 /var/www/Bus_Route_App/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_App/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_App/index.php/site/login
+HTTP_REFERER=http://localhost/Bus_Route_App/index.php/site/contact
+---
+2013/09/24 09:50:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /var/www/Bus_Route_App/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_App/framework/web/CController.php(270): CController->missingAction('login')
+#1 /var/www/Bus_Route_App/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /var/www/Bus_Route_App/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 /var/www/Bus_Route_App/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_App/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_App/index.php/site/login
+HTTP_REFERER=http://localhost/Bus_Route_App/index.php/site/contact
+---
+2013/09/24 09:53:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /var/www/Bus_Route_App/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_App/framework/web/CController.php(270): CController->missingAction('login')
+#1 /var/www/Bus_Route_App/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /var/www/Bus_Route_App/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 /var/www/Bus_Route_App/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_App/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_App/index.php/site/login
+HTTP_REFERER=http://localhost/Bus_Route_App/index.php/site/contact
+---
+2013/09/24 09:54:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /var/www/Bus_Route_App/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_App/framework/web/CController.php(270): CController->missingAction('login')
+#1 /var/www/Bus_Route_App/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /var/www/Bus_Route_App/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 /var/www/Bus_Route_App/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_App/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_App/index.php/site/login
+HTTP_REFERER=http://localhost/Bus_Route_App/index.php/site/contact
+---
+2013/09/24 09:54:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /var/www/Bus_Route_App/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_App/framework/web/CController.php(270): CController->missingAction('login')
+#1 /var/www/Bus_Route_App/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /var/www/Bus_Route_App/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 /var/www/Bus_Route_App/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_App/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_App/index.php/site/login
+HTTP_REFERER=http://localhost/Bus_Route_App/index.php/site/contact
+---
+2013/09/24 09:54:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /var/www/Bus_Route_App/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_App/framework/web/CController.php(270): CController->missingAction('login')
+#1 /var/www/Bus_Route_App/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /var/www/Bus_Route_App/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 /var/www/Bus_Route_App/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_App/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_App/index.php/site/login
+HTTP_REFERER=http://localhost/Bus_Route_App/index.php/site/contact
+---
+2013/09/24 09:55:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /var/www/Bus_Route_App/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_App/framework/web/CController.php(270): CController->missingAction('login')
+#1 /var/www/Bus_Route_App/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /var/www/Bus_Route_App/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 /var/www/Bus_Route_App/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_App/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_App/index.php/site/login
+HTTP_REFERER=http://localhost/Bus_Route_App/index.php/site/contact
+---
+2013/09/24 09:55:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /var/www/Bus_Route_App/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_App/framework/web/CController.php(270): CController->missingAction('login')
+#1 /var/www/Bus_Route_App/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /var/www/Bus_Route_App/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 /var/www/Bus_Route_App/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_App/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_App/index.php/site/login
+HTTP_REFERER=http://localhost/Bus_Route_App/index.php/site/contact
+---
+2013/09/24 09:55:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /var/www/Bus_Route_App/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_App/framework/web/CController.php(270): CController->missingAction('login')
+#1 /var/www/Bus_Route_App/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /var/www/Bus_Route_App/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 /var/www/Bus_Route_App/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_App/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_App/index.php/site/login
+HTTP_REFERER=http://localhost/Bus_Route_App/index.php/site/contact
+---
+2013/09/24 09:56:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /var/www/Bus_Route_App/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_App/framework/web/CController.php(270): CController->missingAction('login')
+#1 /var/www/Bus_Route_App/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /var/www/Bus_Route_App/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 /var/www/Bus_Route_App/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_App/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_App/index.php/site/login
+HTTP_REFERER=http://localhost/Bus_Route_App/index.php/site/contact
+---
+2013/09/24 09:57:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /var/www/Bus_Route_App/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_App/framework/web/CController.php(270): CController->missingAction('login')
+#1 /var/www/Bus_Route_App/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /var/www/Bus_Route_App/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 /var/www/Bus_Route_App/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_App/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_App/index.php/site/login
+HTTP_REFERER=http://localhost/Bus_Route_App/index.php/site/contact
+---
+2013/09/24 09:57:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /var/www/Bus_Route_App/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_App/framework/web/CController.php(270): CController->missingAction('login')
+#1 /var/www/Bus_Route_App/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /var/www/Bus_Route_App/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 /var/www/Bus_Route_App/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_App/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_App/index.php/site/login
+HTTP_REFERER=http://localhost/Bus_Route_App/index.php/site/contact
+---
+2013/09/24 09:57:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /var/www/Bus_Route_App/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_App/framework/web/CController.php(270): CController->missingAction('login')
+#1 /var/www/Bus_Route_App/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /var/www/Bus_Route_App/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 /var/www/Bus_Route_App/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_App/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_App/index.php/site/login
+HTTP_REFERER=http://localhost/Bus_Route_App/index.php/site/contact
+---
+2013/09/24 09:58:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /var/www/Bus_Route_App/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_App/framework/web/CController.php(270): CController->missingAction('login')
+#1 /var/www/Bus_Route_App/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /var/www/Bus_Route_App/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 /var/www/Bus_Route_App/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_App/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_App/index.php/site/login
+HTTP_REFERER=http://localhost/Bus_Route_App/index.php/site/contact
+---
+2013/09/24 09:58:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /var/www/Bus_Route_App/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_App/framework/web/CController.php(270): CController->missingAction('login')
+#1 /var/www/Bus_Route_App/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /var/www/Bus_Route_App/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 /var/www/Bus_Route_App/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_App/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_App/index.php/site/login
+HTTP_REFERER=http://localhost/Bus_Route_App/index.php/site/contact
+---
