@@ -1,18 +1,15 @@
-<?php
-/* @var $this BusrouteController */
-/* @var $model BusRoute */
+<?php 
+$criteria = new CDbCriteria();
+$criteria->condition = 'route_id = 1';
+$bus_route = BusStop::model()->findAll($criteria);
+foreach ($bus_route as $value) { ?>
 
-$this->breadcrumbs=array(
-	'Bus Routes'=>array('index'),
-	'Create',
-);
+	<?php $date = date('h:i', strtotime($value->time)); ?>
+	<ul>
+		<li>
+			<?php echo ucfirst($value->stop_name)."&nbsp;<strong>at</strong>&nbsp;".$date;?>
+			<input type = "checkbox"/>
+		</li>
+	</ul>
 
-$this->menu=array(
-	array('label'=>'List BusRoute', 'url'=>array('index')),
-	array('label'=>'Manage BusRoute', 'url'=>array('admin')),
-);
-?>
-
-<h1>Create BusRoute</h1>
-
-<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php } ?>

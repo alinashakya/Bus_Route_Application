@@ -39,9 +39,9 @@ class BusrouteController extends Controller
 				'actions'=>array('admin','delete'),
 				'users'=>array('admin'),
 			),
-			array('deny',  // deny all users
+			/*array('deny',  // deny all users
 				'users'=>array('*'),
-			),
+			),*/
 		);
 	}
 
@@ -170,4 +170,11 @@ class BusrouteController extends Controller
 			Yii::app()->end();
 		}
 	}
+
+	public function actionGetList(){
+		$value = $_POST['value'];
+		$array = array('value' => $value);
+		echo json_encode($array);
+	}
+
 }

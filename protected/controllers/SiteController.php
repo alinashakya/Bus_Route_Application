@@ -45,4 +45,9 @@ class SiteController extends Controller
 				$this->render('error', $error);
 		}
 	}
+
+	public function actionGetList(){
+		die('testing');
+	}
+
 }

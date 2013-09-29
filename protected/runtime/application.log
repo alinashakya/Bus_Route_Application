@@ -286,3 +286,848 @@ Stack trace:
 REQUEST_URI=/Bus_Route_App/index.php/site/login
 HTTP_REFERER=http://localhost/Bus_Route_App/index.php/site/contact
 ---
+2013/09/26 11:45:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index".' in /var/www/Bus_Route_Application/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('index')
+#1 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Bus_Route_Application/index
+---
+2013/09/26 13:34:47 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/Bus_Route_Application/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/Bus_Route_Application/framework/web/CAssetManager.php:138
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CAssetManager.php(123): CAssetManager->setBasePath('/var/www/Bus_Ro...')
+#1 /var/www/Bus_Route_Application/framework/web/CAssetManager.php(217): CAssetManager->getBasePath()
+#2 /var/www/Bus_Route_Application/framework/zii/widgets/CListView.php(209): CAssetManager->publish('/var/www/Bus_Ro...')
+#3 /var/www/Bus_Route_Application/framework/web/CBaseController.php(147): CListView->init()
+#4 /var/www/Bus_Route_Application/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#5 /var/www/Bus_Route_Application/protected/views/busroute/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#6 /var/www/Bus_Route_Application/framework/web/CBaseController.php(126): require('/var/www/Bus_Ro...')
+#7 /var/www/Bus_Route_Application/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Bus_Ro...', Array, true)
+#8 /var/www/Bus_Route_Application/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Bus_Ro...', Array, true)
+#9 /var/www/Bus_Route_Application/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#10 /var/www/Bus_Route_Application/protected/controllers/BusrouteController.php(128): CController->render('index', Array)
+#11 /var/www/Bus_Route_Application/framework/web/actions/CInlineAction.php(49): BusrouteController->actionIndex()
+#12 /var/www/Bus_Route_Application/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/Bus_Route_Application/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /var/www/Bus_Route_Application/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/Bus_Route_Application/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /var/www/Bus_Route_Application/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/Bus_Route_Application/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/Bus_Route_Application/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/Bus_Route_Application/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('index')
+#21 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('Busroute/index')
+#22 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/Bus_Route_Application/Busroute/index
+---
+2013/09/26 13:34:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in /var/www/Bus_Route_Application/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(270): CController->missingAction('index.php')
+#1 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('index.php')
+#2 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('Busroute/index....')
+#3 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_Application/Busroute/index.php
+---
+2013/09/26 13:34:58 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/Bus_Route_Application/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/Bus_Route_Application/framework/web/CAssetManager.php:138
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CAssetManager.php(123): CAssetManager->setBasePath('/var/www/Bus_Ro...')
+#1 /var/www/Bus_Route_Application/framework/web/CAssetManager.php(217): CAssetManager->getBasePath()
+#2 /var/www/Bus_Route_Application/framework/zii/widgets/CListView.php(209): CAssetManager->publish('/var/www/Bus_Ro...')
+#3 /var/www/Bus_Route_Application/framework/web/CBaseController.php(147): CListView->init()
+#4 /var/www/Bus_Route_Application/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#5 /var/www/Bus_Route_Application/protected/views/busroute/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#6 /var/www/Bus_Route_Application/framework/web/CBaseController.php(126): require('/var/www/Bus_Ro...')
+#7 /var/www/Bus_Route_Application/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Bus_Ro...', Array, true)
+#8 /var/www/Bus_Route_Application/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Bus_Ro...', Array, true)
+#9 /var/www/Bus_Route_Application/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#10 /var/www/Bus_Route_Application/protected/controllers/BusrouteController.php(128): CController->render('index', Array)
+#11 /var/www/Bus_Route_Application/framework/web/actions/CInlineAction.php(49): BusrouteController->actionIndex()
+#12 /var/www/Bus_Route_Application/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/Bus_Route_Application/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /var/www/Bus_Route_Application/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/Bus_Route_Application/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /var/www/Bus_Route_Application/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/Bus_Route_Application/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/Bus_Route_Application/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/Bus_Route_Application/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('')
+#21 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('Busroute')
+#22 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/Bus_Route_Application/Busroute
+---
+2013/09/26 13:35:18 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/Bus_Route_Application/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/Bus_Route_Application/framework/web/CAssetManager.php:138
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CAssetManager.php(123): CAssetManager->setBasePath('/var/www/Bus_Ro...')
+#1 /var/www/Bus_Route_Application/framework/web/CAssetManager.php(217): CAssetManager->getBasePath()
+#2 /var/www/Bus_Route_Application/framework/zii/widgets/CListView.php(209): CAssetManager->publish('/var/www/Bus_Ro...')
+#3 /var/www/Bus_Route_Application/framework/web/CBaseController.php(147): CListView->init()
+#4 /var/www/Bus_Route_Application/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#5 /var/www/Bus_Route_Application/protected/views/busroute/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#6 /var/www/Bus_Route_Application/framework/web/CBaseController.php(126): require('/var/www/Bus_Ro...')
+#7 /var/www/Bus_Route_Application/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Bus_Ro...', Array, true)
+#8 /var/www/Bus_Route_Application/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Bus_Ro...', Array, true)
+#9 /var/www/Bus_Route_Application/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#10 /var/www/Bus_Route_Application/protected/controllers/BusrouteController.php(128): CController->render('index', Array)
+#11 /var/www/Bus_Route_Application/framework/web/actions/CInlineAction.php(49): BusrouteController->actionIndex()
+#12 /var/www/Bus_Route_Application/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/Bus_Route_Application/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /var/www/Bus_Route_Application/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/Bus_Route_Application/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /var/www/Bus_Route_Application/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/Bus_Route_Application/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/Bus_Route_Application/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/Bus_Route_Application/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('')
+#21 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('Busroute')
+#22 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/Bus_Route_Application/Busroute
+---
+2013/09/26 15:47:14 [error] [exception.CException] exception 'CException' with message 'Property "SiteController.page" is not defined.' in /var/www/Bus_Route_Application/framework/base/CComponent.php:173
+Stack trace:
+#0 /var/www/Bus_Route_Application/protected/views/site/index.php(18): CComponent->__set('page', 'Bus Route Appli...')
+#1 /var/www/Bus_Route_Application/framework/web/CBaseController.php(126): require('/var/www/Bus_Ro...')
+#2 /var/www/Bus_Route_Application/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Bus_Ro...', NULL, true)
+#3 /var/www/Bus_Route_Application/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Bus_Ro...', NULL, true)
+#4 /var/www/Bus_Route_Application/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#5 /var/www/Bus_Route_Application/protected/controllers/SiteController.php(32): CController->render('index')
+#6 /var/www/Bus_Route_Application/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#7 /var/www/Bus_Route_Application/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/Bus_Route_Application/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /var/www/Bus_Route_Application/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('')
+#11 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#12 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/Bus_Route_Application/index.php
+---
+2013/09/26 15:47:45 [error] [exception.CException] exception 'CException' with message 'Property "SiteController.page" is not defined.' in /var/www/Bus_Route_Application/framework/base/CComponent.php:173
+Stack trace:
+#0 /var/www/Bus_Route_Application/protected/views/site/index.php(17): CComponent->__set('page', 'Bus Route Appli...')
+#1 /var/www/Bus_Route_Application/framework/web/CBaseController.php(126): require('/var/www/Bus_Ro...')
+#2 /var/www/Bus_Route_Application/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Bus_Ro...', NULL, true)
+#3 /var/www/Bus_Route_Application/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Bus_Ro...', NULL, true)
+#4 /var/www/Bus_Route_Application/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#5 /var/www/Bus_Route_Application/protected/controllers/SiteController.php(32): CController->render('index')
+#6 /var/www/Bus_Route_Application/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#7 /var/www/Bus_Route_Application/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/Bus_Route_Application/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /var/www/Bus_Route_Application/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('')
+#11 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#12 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/Bus_Route_Application/index.php
+---
+2013/09/26 15:47:46 [error] [exception.CException] exception 'CException' with message 'Property "SiteController.page" is not defined.' in /var/www/Bus_Route_Application/framework/base/CComponent.php:173
+Stack trace:
+#0 /var/www/Bus_Route_Application/protected/views/site/index.php(17): CComponent->__set('page', 'Bus Route Appli...')
+#1 /var/www/Bus_Route_Application/framework/web/CBaseController.php(126): require('/var/www/Bus_Ro...')
+#2 /var/www/Bus_Route_Application/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Bus_Ro...', NULL, true)
+#3 /var/www/Bus_Route_Application/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Bus_Ro...', NULL, true)
+#4 /var/www/Bus_Route_Application/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#5 /var/www/Bus_Route_Application/protected/controllers/SiteController.php(32): CController->render('index')
+#6 /var/www/Bus_Route_Application/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#7 /var/www/Bus_Route_Application/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/Bus_Route_Application/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /var/www/Bus_Route_Application/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('')
+#11 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#12 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/Bus_Route_Application/index.php
+---
+2013/09/26 15:47:47 [error] [exception.CException] exception 'CException' with message 'Property "SiteController.page" is not defined.' in /var/www/Bus_Route_Application/framework/base/CComponent.php:173
+Stack trace:
+#0 /var/www/Bus_Route_Application/protected/views/site/index.php(17): CComponent->__set('page', 'Bus Route Appli...')
+#1 /var/www/Bus_Route_Application/framework/web/CBaseController.php(126): require('/var/www/Bus_Ro...')
+#2 /var/www/Bus_Route_Application/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Bus_Ro...', NULL, true)
+#3 /var/www/Bus_Route_Application/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Bus_Ro...', NULL, true)
+#4 /var/www/Bus_Route_Application/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#5 /var/www/Bus_Route_Application/protected/controllers/SiteController.php(32): CController->render('index')
+#6 /var/www/Bus_Route_Application/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#7 /var/www/Bus_Route_Application/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/Bus_Route_Application/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /var/www/Bus_Route_Application/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('')
+#11 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#12 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#13 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/Bus_Route_Application/index.php
+---
+2013/09/26 16:34:21 [error] [php] Trying to get property of non-object (/var/www/Bus_Route_Application/protected/views/site/index.php:26)
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(869): SiteController->renderFile()
+#1 /var/www/Bus_Route_Application/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /var/www/Bus_Route_Application/protected/controllers/SiteController.php(32): SiteController->render()
+#3 /var/www/Bus_Route_Application/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /var/www/Bus_Route_Application/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/Bus_Route_Application/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/Bus_Route_Application/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Bus_Route_Application/index.php(13): CWebApplication->run()
+REQUEST_URI=/Bus_Route_Application/index.php
+in /var/www/Bus_Route_Application/protected/views/site/index.php (26)
+in /var/www/Bus_Route_Application/protected/controllers/SiteController.php (32)
+in /var/www/Bus_Route_Application/index.php (13)
+2013/09/26 16:36:14 [error] [php] Trying to get property of non-object (/var/www/Bus_Route_Application/protected/views/site/index.php:26)
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(869): SiteController->renderFile()
+#1 /var/www/Bus_Route_Application/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /var/www/Bus_Route_Application/protected/controllers/SiteController.php(32): SiteController->render()
+#3 /var/www/Bus_Route_Application/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /var/www/Bus_Route_Application/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/Bus_Route_Application/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/Bus_Route_Application/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Bus_Route_Application/index.php(13): CWebApplication->run()
+REQUEST_URI=/Bus_Route_Application/index.php
+in /var/www/Bus_Route_Application/protected/views/site/index.php (26)
+in /var/www/Bus_Route_Application/protected/controllers/SiteController.php (32)
+in /var/www/Bus_Route_Application/index.php (13)
+2013/09/26 16:36:47 [error] [php] Trying to get property of non-object (/var/www/Bus_Route_Application/protected/views/site/index.php:27)
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(869): SiteController->renderFile()
+#1 /var/www/Bus_Route_Application/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /var/www/Bus_Route_Application/protected/controllers/SiteController.php(32): SiteController->render()
+#3 /var/www/Bus_Route_Application/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /var/www/Bus_Route_Application/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/Bus_Route_Application/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/Bus_Route_Application/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Bus_Route_Application/index.php(13): CWebApplication->run()
+REQUEST_URI=/Bus_Route_Application/index.php
+in /var/www/Bus_Route_Application/protected/views/site/index.php (27)
+in /var/www/Bus_Route_Application/protected/controllers/SiteController.php (32)
+in /var/www/Bus_Route_Application/index.php (13)
+2013/09/26 16:38:10 [error] [php] Trying to get property of non-object (/var/www/Bus_Route_Application/protected/views/site/index.php:27)
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(869): SiteController->renderFile()
+#1 /var/www/Bus_Route_Application/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /var/www/Bus_Route_Application/protected/controllers/SiteController.php(32): SiteController->render()
+#3 /var/www/Bus_Route_Application/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /var/www/Bus_Route_Application/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/Bus_Route_Application/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/Bus_Route_Application/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Bus_Route_Application/index.php(13): CWebApplication->run()
+REQUEST_URI=/Bus_Route_Application/index.php
+in /var/www/Bus_Route_Application/protected/views/site/index.php (27)
+in /var/www/Bus_Route_Application/protected/controllers/SiteController.php (32)
+in /var/www/Bus_Route_Application/index.php (13)
+2013/09/26 16:38:11 [error] [php] Trying to get property of non-object (/var/www/Bus_Route_Application/protected/views/site/index.php:27)
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(869): SiteController->renderFile()
+#1 /var/www/Bus_Route_Application/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /var/www/Bus_Route_Application/protected/controllers/SiteController.php(32): SiteController->render()
+#3 /var/www/Bus_Route_Application/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /var/www/Bus_Route_Application/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/Bus_Route_Application/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/Bus_Route_Application/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Bus_Route_Application/index.php(13): CWebApplication->run()
+REQUEST_URI=/Bus_Route_Application/index.php
+in /var/www/Bus_Route_Application/protected/views/site/index.php (27)
+in /var/www/Bus_Route_Application/protected/controllers/SiteController.php (32)
+in /var/www/Bus_Route_Application/index.php (13)
+2013/09/26 16:38:42 [error] [php] Trying to get property of non-object (/var/www/Bus_Route_Application/protected/views/site/index.php:27)
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(869): SiteController->renderFile()
+#1 /var/www/Bus_Route_Application/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /var/www/Bus_Route_Application/protected/controllers/SiteController.php(32): SiteController->render()
+#3 /var/www/Bus_Route_Application/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /var/www/Bus_Route_Application/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/Bus_Route_Application/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/Bus_Route_Application/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Bus_Route_Application/index.php(13): CWebApplication->run()
+REQUEST_URI=/Bus_Route_Application/index.php
+in /var/www/Bus_Route_Application/protected/views/site/index.php (27)
+in /var/www/Bus_Route_Application/protected/controllers/SiteController.php (32)
+in /var/www/Bus_Route_Application/index.php (13)
+2013/09/26 16:52:47 [error] [php] Undefined variable: models (/var/www/Bus_Route_Application/protected/views/site/index.php:30)
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(869): SiteController->renderFile()
+#1 /var/www/Bus_Route_Application/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /var/www/Bus_Route_Application/protected/controllers/SiteController.php(32): SiteController->render()
+#3 /var/www/Bus_Route_Application/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /var/www/Bus_Route_Application/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/Bus_Route_Application/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/Bus_Route_Application/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Bus_Route_Application/index.php(13): CWebApplication->run()
+REQUEST_URI=/Bus_Route_Application/index.php
+in /var/www/Bus_Route_Application/protected/views/site/index.php (30)
+in /var/www/Bus_Route_Application/protected/controllers/SiteController.php (32)
+in /var/www/Bus_Route_Application/index.php (13)
+2013/09/26 16:54:04 [error] [php] Undefined variable: category (/var/www/Bus_Route_Application/protected/views/site/index.php:31)
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(869): SiteController->renderFile()
+#1 /var/www/Bus_Route_Application/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /var/www/Bus_Route_Application/protected/controllers/SiteController.php(32): SiteController->render()
+#3 /var/www/Bus_Route_Application/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /var/www/Bus_Route_Application/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/Bus_Route_Application/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/Bus_Route_Application/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Bus_Route_Application/index.php(13): CWebApplication->run()
+REQUEST_URI=/Bus_Route_Application/index.php
+in /var/www/Bus_Route_Application/protected/views/site/index.php (31)
+in /var/www/Bus_Route_Application/protected/controllers/SiteController.php (32)
+in /var/www/Bus_Route_Application/index.php (13)
+2013/09/26 16:58:37 [error] [exception.CException] exception 'CException' with message 'Property "BusRoute.name" is not defined.' in /var/www/Bus_Route_Application/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/db/ar/CActiveRecord.php(143): CComponent->__get('name')
+#1 /var/www/Bus_Route_Application/protected/views/site/index.php(31): CActiveRecord->__get('name')
+#2 /var/www/Bus_Route_Application/framework/web/CBaseController.php(126): require('/var/www/Bus_Ro...')
+#3 /var/www/Bus_Route_Application/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Bus_Ro...', NULL, true)
+#4 /var/www/Bus_Route_Application/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Bus_Ro...', NULL, true)
+#5 /var/www/Bus_Route_Application/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#6 /var/www/Bus_Route_Application/protected/controllers/SiteController.php(32): CController->render('index')
+#7 /var/www/Bus_Route_Application/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#8 /var/www/Bus_Route_Application/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/Bus_Route_Application/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /var/www/Bus_Route_Application/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('')
+#12 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#13 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/Bus_Route_Application/index.php
+---
+2013/09/26 17:48:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "getList".' in /var/www/Bus_Route_Application/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('getList')
+#1 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Bus_Route_Application/getList
+HTTP_REFERER=http://localhost/Bus_Route_Application/index.php
+---
+2013/09/26 20:56:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "getList".' in /var/www/Bus_Route_Application/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('getList')
+#1 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Bus_Route_Application/getList
+HTTP_REFERER=http://localhost/Bus_Route_Application/index.php
+---
+2013/09/26 21:01:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "getList".' in /var/www/Bus_Route_Application/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('getList')
+#1 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Bus_Route_Application/getList
+HTTP_REFERER=http://localhost/Bus_Route_Application/index.php
+---
+2013/09/26 21:11:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "getList".' in /var/www/Bus_Route_Application/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('getList')
+#1 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Bus_Route_Application/getList
+HTTP_REFERER=http://localhost/Bus_Route_Application/index.php
+---
+2013/09/26 21:22:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "getList/getList".' in /var/www/Bus_Route_Application/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('getList/getList')
+#1 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Bus_Route_Application/getList/getList/
+HTTP_REFERER=http://localhost/Bus_Route_Application/index.php
+---
+2013/09/27 15:50:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "getList/getList".' in /var/www/Bus_Route_Application/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('getList/getList')
+#1 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Bus_Route_Application/getList/getList/
+HTTP_REFERER=http://localhost/Bus_Route_Application/
+---
+2013/09/27 15:54:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "getListgetList".' in /var/www/Bus_Route_Application/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('getListgetList')
+#1 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Bus_Route_Application/getListgetList
+HTTP_REFERER=http://localhost/Bus_Route_Application/
+---
+2013/09/27 15:55:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "getList".' in /var/www/Bus_Route_Application/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('getList')
+#1 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Bus_Route_Application/getList
+HTTP_REFERER=http://localhost/Bus_Route_Application/
+---
+2013/09/27 15:56:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "getlist".' in /var/www/Bus_Route_Application/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('getlist')
+#1 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Bus_Route_Application/getlist
+---
+2013/09/27 22:22:01 [error] [php] Undefined index: value (/var/www/Bus_Route_Application/protected/controllers/BusrouteController.php:175)
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/filters/CFilterChain.php(133): BusrouteController->runAction()
+#1 /var/www/Bus_Route_Application/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /var/www/Bus_Route_Application/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /var/www/Bus_Route_Application/framework/web/filters/CInlineFilter.php(58): BusrouteController->filterAccessControl()
+#4 /var/www/Bus_Route_Application/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /var/www/Bus_Route_Application/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/Bus_Route_Application/framework/web/CController.php(265): BusrouteController->runActionWithFilters()
+#7 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): BusrouteController->run()
+#8 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/Bus_Route_Application/index.php(13): CWebApplication->run()
+REQUEST_URI=/Bus_Route_Application/busroute/getList
+in /var/www/Bus_Route_Application/protected/controllers/BusrouteController.php (175)
+in /var/www/Bus_Route_Application/index.php (13)
+2013/09/28 22:27:48 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/Bus_Route_Application/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/Bus_Route_Application/framework/web/CAssetManager.php:138
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CAssetManager.php(123): CAssetManager->setBasePath('/var/www/Bus_Ro...')
+#1 /var/www/Bus_Route_Application/framework/web/CAssetManager.php(217): CAssetManager->getBasePath()
+#2 /var/www/Bus_Route_Application/framework/zii/widgets/CListView.php(209): CAssetManager->publish('/var/www/Bus_Ro...')
+#3 /var/www/Bus_Route_Application/framework/web/CBaseController.php(147): CListView->init()
+#4 /var/www/Bus_Route_Application/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#5 /var/www/Bus_Route_Application/protected/views/busroute/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#6 /var/www/Bus_Route_Application/framework/web/CBaseController.php(126): require('/var/www/Bus_Ro...')
+#7 /var/www/Bus_Route_Application/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Bus_Ro...', Array, true)
+#8 /var/www/Bus_Route_Application/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Bus_Ro...', Array, true)
+#9 /var/www/Bus_Route_Application/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#10 /var/www/Bus_Route_Application/protected/controllers/BusrouteController.php(128): CController->render('index', Array)
+#11 /var/www/Bus_Route_Application/framework/web/actions/CInlineAction.php(49): BusrouteController->actionIndex()
+#12 /var/www/Bus_Route_Application/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/Bus_Route_Application/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /var/www/Bus_Route_Application/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/Bus_Route_Application/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /var/www/Bus_Route_Application/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/Bus_Route_Application/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/Bus_Route_Application/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/Bus_Route_Application/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('index')
+#21 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('busroute/index')
+#22 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/Bus_Route_Application/busroute/index
+HTTP_REFERER=http://localhost/Bus_Route_Application/
+---
+2013/09/28 22:28:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in /var/www/Bus_Route_Application/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(270): CController->missingAction('index.php')
+#1 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('index.php')
+#2 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('busroute/index....')
+#3 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_Application/busroute/index.php
+---
+2013/09/28 22:30:04 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/Bus_Route_Application/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/Bus_Route_Application/framework/web/CAssetManager.php:138
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CAssetManager.php(123): CAssetManager->setBasePath('/var/www/Bus_Ro...')
+#1 /var/www/Bus_Route_Application/framework/web/CAssetManager.php(217): CAssetManager->getBasePath()
+#2 /var/www/Bus_Route_Application/framework/zii/widgets/CListView.php(209): CAssetManager->publish('/var/www/Bus_Ro...')
+#3 /var/www/Bus_Route_Application/framework/web/CBaseController.php(147): CListView->init()
+#4 /var/www/Bus_Route_Application/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#5 /var/www/Bus_Route_Application/protected/views/busroute/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#6 /var/www/Bus_Route_Application/framework/web/CBaseController.php(126): require('/var/www/Bus_Ro...')
+#7 /var/www/Bus_Route_Application/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Bus_Ro...', Array, true)
+#8 /var/www/Bus_Route_Application/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Bus_Ro...', Array, true)
+#9 /var/www/Bus_Route_Application/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#10 /var/www/Bus_Route_Application/protected/controllers/BusrouteController.php(128): CController->render('index', Array)
+#11 /var/www/Bus_Route_Application/framework/web/actions/CInlineAction.php(49): BusrouteController->actionIndex()
+#12 /var/www/Bus_Route_Application/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/Bus_Route_Application/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /var/www/Bus_Route_Application/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/Bus_Route_Application/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /var/www/Bus_Route_Application/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/Bus_Route_Application/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/Bus_Route_Application/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/Bus_Route_Application/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('index')
+#21 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('busroute/index')
+#22 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/Bus_Route_Application/busroute/index
+HTTP_REFERER=http://localhost/Bus_Route_Application/index.php
+---
+2013/09/28 22:31:20 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/Bus_Route_Application/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/Bus_Route_Application/framework/web/CAssetManager.php:138
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CAssetManager.php(123): CAssetManager->setBasePath('/var/www/Bus_Ro...')
+#1 /var/www/Bus_Route_Application/framework/web/CAssetManager.php(217): CAssetManager->getBasePath()
+#2 /var/www/Bus_Route_Application/framework/zii/widgets/CListView.php(209): CAssetManager->publish('/var/www/Bus_Ro...')
+#3 /var/www/Bus_Route_Application/framework/web/CBaseController.php(147): CListView->init()
+#4 /var/www/Bus_Route_Application/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#5 /var/www/Bus_Route_Application/protected/views/busroute/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#6 /var/www/Bus_Route_Application/framework/web/CBaseController.php(126): require('/var/www/Bus_Ro...')
+#7 /var/www/Bus_Route_Application/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Bus_Ro...', Array, true)
+#8 /var/www/Bus_Route_Application/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Bus_Ro...', Array, true)
+#9 /var/www/Bus_Route_Application/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#10 /var/www/Bus_Route_Application/protected/controllers/BusrouteController.php(128): CController->render('index', Array)
+#11 /var/www/Bus_Route_Application/framework/web/actions/CInlineAction.php(49): BusrouteController->actionIndex()
+#12 /var/www/Bus_Route_Application/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/Bus_Route_Application/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /var/www/Bus_Route_Application/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/Bus_Route_Application/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /var/www/Bus_Route_Application/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/Bus_Route_Application/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/Bus_Route_Application/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/Bus_Route_Application/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('index')
+#21 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('busroute/index')
+#22 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/Bus_Route_Application/busroute/index
+---
+2013/09/28 22:31:26 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/Bus_Route_Application/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/Bus_Route_Application/framework/web/CAssetManager.php:138
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CAssetManager.php(123): CAssetManager->setBasePath('/var/www/Bus_Ro...')
+#1 /var/www/Bus_Route_Application/framework/web/CAssetManager.php(217): CAssetManager->getBasePath()
+#2 /var/www/Bus_Route_Application/framework/zii/widgets/CListView.php(209): CAssetManager->publish('/var/www/Bus_Ro...')
+#3 /var/www/Bus_Route_Application/framework/web/CBaseController.php(147): CListView->init()
+#4 /var/www/Bus_Route_Application/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#5 /var/www/Bus_Route_Application/protected/views/busroute/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#6 /var/www/Bus_Route_Application/framework/web/CBaseController.php(126): require('/var/www/Bus_Ro...')
+#7 /var/www/Bus_Route_Application/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Bus_Ro...', Array, true)
+#8 /var/www/Bus_Route_Application/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Bus_Ro...', Array, true)
+#9 /var/www/Bus_Route_Application/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#10 /var/www/Bus_Route_Application/protected/controllers/BusrouteController.php(128): CController->render('index', Array)
+#11 /var/www/Bus_Route_Application/framework/web/actions/CInlineAction.php(49): BusrouteController->actionIndex()
+#12 /var/www/Bus_Route_Application/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/Bus_Route_Application/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /var/www/Bus_Route_Application/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/Bus_Route_Application/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /var/www/Bus_Route_Application/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/Bus_Route_Application/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/Bus_Route_Application/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/Bus_Route_Application/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('index')
+#21 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('busroute/index')
+#22 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/Bus_Route_Application/busroute/index
+HTTP_REFERER=http://localhost/Bus_Route_Application/
+---
+2013/09/28 22:40:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in /var/www/Bus_Route_Application/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(270): CController->missingAction('index.php')
+#1 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('index.php')
+#2 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index.php')
+#3 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_Application/site/index.php
+---
+2013/09/28 22:40:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in /var/www/Bus_Route_Application/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(270): CController->missingAction('index.php')
+#1 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('index.php')
+#2 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index.php')
+#3 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_Application/site/index.php
+---
+2013/09/28 22:41:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in /var/www/Bus_Route_Application/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(270): CController->missingAction('index.php')
+#1 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('index.php')
+#2 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index.php')
+#3 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_Application/site/index.php
+HTTP_REFERER=http://localhost/Bus_Route_Application/
+---
+2013/09/28 22:41:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in /var/www/Bus_Route_Application/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(270): CController->missingAction('index.php')
+#1 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('index.php')
+#2 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index.php')
+#3 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_Application/site/index.php
+HTTP_REFERER=http://localhost/Bus_Route_Application/site
+---
+2013/09/28 22:42:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in /var/www/Bus_Route_Application/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(270): CController->missingAction('index.php')
+#1 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('index.php')
+#2 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index.php')
+#3 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_Application/site/index.php
+HTTP_REFERER=http://localhost/Bus_Route_Application/site
+---
+2013/09/28 22:42:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "tes.php".' in /var/www/Bus_Route_Application/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(270): CController->missingAction('tes.php')
+#1 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('tes.php')
+#2 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('site/tes.php')
+#3 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_Application/site/tes.php
+---
+2013/09/28 22:42:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "test.php".' in /var/www/Bus_Route_Application/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(270): CController->missingAction('test.php')
+#1 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('test.php')
+#2 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('site/test.php')
+#3 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_Application/site/test.php
+---
+2013/09/28 22:43:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "test.php".' in /var/www/Bus_Route_Application/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('test.php')
+#1 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Bus_Route_Application/test.php
+---
+2013/09/28 22:43:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index/test.php".' in /var/www/Bus_Route_Application/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('index/test.php')
+#1 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Bus_Route_Application/index/test.php
+---
+2013/09/28 22:47:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "test.php".' in /var/www/Bus_Route_Application/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('test.php')
+#1 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Bus_Route_Application/test.php
+---
+2013/09/28 22:49:22 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/Bus_Route_Application/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/Bus_Route_Application/framework/web/CAssetManager.php:138
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CAssetManager.php(123): CAssetManager->setBasePath('/var/www/Bus_Ro...')
+#1 /var/www/Bus_Route_Application/framework/web/CAssetManager.php(217): CAssetManager->getBasePath()
+#2 /var/www/Bus_Route_Application/framework/zii/widgets/CListView.php(209): CAssetManager->publish('/var/www/Bus_Ro...')
+#3 /var/www/Bus_Route_Application/framework/web/CBaseController.php(147): CListView->init()
+#4 /var/www/Bus_Route_Application/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#5 /var/www/Bus_Route_Application/protected/views/busroute/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#6 /var/www/Bus_Route_Application/framework/web/CBaseController.php(126): require('/var/www/Bus_Ro...')
+#7 /var/www/Bus_Route_Application/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Bus_Ro...', Array, true)
+#8 /var/www/Bus_Route_Application/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Bus_Ro...', Array, true)
+#9 /var/www/Bus_Route_Application/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#10 /var/www/Bus_Route_Application/protected/controllers/BusrouteController.php(128): CController->render('index', Array)
+#11 /var/www/Bus_Route_Application/framework/web/actions/CInlineAction.php(49): BusrouteController->actionIndex()
+#12 /var/www/Bus_Route_Application/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/Bus_Route_Application/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /var/www/Bus_Route_Application/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/Bus_Route_Application/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /var/www/Bus_Route_Application/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/Bus_Route_Application/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/Bus_Route_Application/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/Bus_Route_Application/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('')
+#21 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('busroute')
+#22 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/Bus_Route_Application/busroute/
+---
+2013/09/28 22:51:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "test".' in /var/www/Bus_Route_Application/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(270): CController->missingAction('test')
+#1 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('test')
+#2 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('site/test')
+#3 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_Application/site/test
+---
+2013/09/28 22:52:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "test".' in /var/www/Bus_Route_Application/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(270): CController->missingAction('test')
+#1 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('test')
+#2 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('site/test')
+#3 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_Application/site/test
+---
+2013/09/28 22:52:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "test.php".' in /var/www/Bus_Route_Application/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(270): CController->missingAction('test.php')
+#1 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('test.php')
+#2 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('site/test.php')
+#3 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_Application/site/test.php
+---
+2013/09/28 22:58:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "route_list".' in /var/www/Bus_Route_Application/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(270): CController->missingAction('route_list')
+#1 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('route_list')
+#2 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('busroute/route_...')
+#3 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_Application/busroute/route_list
+---
+2013/09/28 22:58:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "route_list".' in /var/www/Bus_Route_Application/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(270): CController->missingAction('route_list')
+#1 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('route_list')
+#2 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('busroute/route_...')
+#3 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_Application/busroute/route_list
+---
+2013/09/28 22:58:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "route_list.php".' in /var/www/Bus_Route_Application/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(270): CController->missingAction('route_list.php')
+#1 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('route_list.php')
+#2 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('busroute/route_...')
+#3 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_Application/busroute/route_list.php
+---
+2013/09/28 23:00:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "route_list.php".' in /var/www/Bus_Route_Application/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(270): CController->missingAction('route_list.php')
+#1 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('route_list.php')
+#2 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('busroute/route_...')
+#3 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_Application/busroute/route_list.php
+---
+2013/09/28 23:41:42 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound. The SQL statement executed was: SELECT * FROM `tbl_bus_stop` `t` WHERE route_id = :1.
+in /var/www/Bus_Route_Application/protected/views/busroute/create.php (5)
+in /var/www/Bus_Route_Application/protected/controllers/BusrouteController.php (79)
+in /var/www/Bus_Route_Application/index.php (13)
+2013/09/28 23:41:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound. The SQL statement executed was: SELECT * FROM `tbl_bus_stop` `t` WHERE route_id = :1' in /var/www/Bus_Route_Application/framework/db/CDbCommand.php:541
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/Bus_Route_Application/framework/db/ar/CActiveRecord.php(1297): CDbCommand->queryAll()
+#2 /var/www/Bus_Route_Application/framework/db/ar/CActiveRecord.php(1416): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /var/www/Bus_Route_Application/protected/views/busroute/create.php(5): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /var/www/Bus_Route_Application/framework/web/CBaseController.php(126): require('/var/www/Bus_Ro...')
+#5 /var/www/Bus_Route_Application/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Bus_Ro...', Array, true)
+#6 /var/www/Bus_Route_Application/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Bus_Ro...', Array, true)
+#7 /var/www/Bus_Route_Application/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#8 /var/www/Bus_Route_Application/protected/controllers/BusrouteController.php(79): CController->render('create', Array)
+#9 /var/www/Bus_Route_Application/framework/web/actions/CInlineAction.php(49): BusrouteController->actionCreate()
+#10 /var/www/Bus_Route_Application/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /var/www/Bus_Route_Application/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /var/www/Bus_Route_Application/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /var/www/Bus_Route_Application/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /var/www/Bus_Route_Application/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /var/www/Bus_Route_Application/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /var/www/Bus_Route_Application/framework/web/CController.php(291): CFilterChain->run()
+#17 /var/www/Bus_Route_Application/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('create')
+#19 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('busroute/create')
+#20 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#21 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/Bus_Route_Application/busroute/create
+HTTP_REFERER=http://localhost/Bus_Route_Application/
+---
+2013/09/29 10:45:40 [error] [php] Use of undefined constant nbsp - assumed 'nbsp' (/var/www/Bus_Route_Application/protected/views/busroute/create.php:10)
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(869): BusrouteController->renderFile()
+#1 /var/www/Bus_Route_Application/framework/web/CController.php(782): BusrouteController->renderPartial()
+#2 /var/www/Bus_Route_Application/protected/controllers/BusrouteController.php(79): BusrouteController->render()
+#3 /var/www/Bus_Route_Application/framework/web/actions/CInlineAction.php(49): BusrouteController->actionCreate()
+#4 /var/www/Bus_Route_Application/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/Bus_Route_Application/framework/web/filters/CFilterChain.php(133): BusrouteController->runAction()
+#6 /var/www/Bus_Route_Application/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /var/www/Bus_Route_Application/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /var/www/Bus_Route_Application/framework/web/filters/CInlineFilter.php(58): BusrouteController->filterAccessControl()
+#9 /var/www/Bus_Route_Application/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /var/www/Bus_Route_Application/framework/web/CController.php(291): CFilterChain->run()
+#11 /var/www/Bus_Route_Application/framework/web/CController.php(265): BusrouteController->runActionWithFilters()
+#12 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): BusrouteController->run()
+#13 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#15 /var/www/Bus_Route_Application/index.php(13): CWebApplication->run()
+REQUEST_URI=/Bus_Route_Application/busroute/create
+in /var/www/Bus_Route_Application/protected/views/busroute/create.php (10)
+in /var/www/Bus_Route_Application/protected/controllers/BusrouteController.php (79)
+in /var/www/Bus_Route_Application/index.php (13)
+2013/09/29 10:48:45 [error] [exception.CException] exception 'CException' with message 'Property "BusStop.name" is not defined.' in /var/www/Bus_Route_Application/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/db/ar/CActiveRecord.php(143): CComponent->__get('name')
+#1 /var/www/Bus_Route_Application/protected/views/busroute/create.php(9): CActiveRecord->__get('name')
+#2 /var/www/Bus_Route_Application/framework/web/CBaseController.php(126): require('/var/www/Bus_Ro...')
+#3 /var/www/Bus_Route_Application/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/Bus_Ro...', Array, true)
+#4 /var/www/Bus_Route_Application/framework/web/CController.php(869): CBaseController->renderFile('/var/www/Bus_Ro...', Array, true)
+#5 /var/www/Bus_Route_Application/framework/web/CController.php(782): CController->renderPartial('create', Array, true)
+#6 /var/www/Bus_Route_Application/protected/controllers/BusrouteController.php(79): CController->render('create', Array)
+#7 /var/www/Bus_Route_Application/framework/web/actions/CInlineAction.php(49): BusrouteController->actionCreate()
+#8 /var/www/Bus_Route_Application/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /var/www/Bus_Route_Application/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 /var/www/Bus_Route_Application/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /var/www/Bus_Route_Application/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 /var/www/Bus_Route_Application/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 /var/www/Bus_Route_Application/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 /var/www/Bus_Route_Application/framework/web/CController.php(291): CFilterChain->run()
+#15 /var/www/Bus_Route_Application/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('create')
+#17 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('busroute/create')
+#18 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#19 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/Bus_Route_Application/busroute/create
+---
+2013/09/29 11:32:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "4".' in /var/www/Bus_Route_Application/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('4')
+#1 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Bus_Route_Application/4
+---

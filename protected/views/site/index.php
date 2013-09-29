@@ -1,28 +1,67 @@
-<?php
-/* @var $this SiteController */
 
-$this->pageTitle=Yii::app()->name;
-?>
 
-<?php echo CHtml::link("Check In");?>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
- <h1><?php echo "Route:";?></h1>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0-alpha.2/jquery.mobile-1.4.0-alpha.2.min.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.0-alpha.2/jquery.mobile-1.4.0-alpha.2.min.js"></script>
 
-<?php 
 
-$criteria=new CDbCriteria;
-		$criteria->condition='status=:status';
-		$criteria->params=array(':status'=>1);
+<div data-role="page">
+
+	<div data-role="header">
+		<h1>Page Title</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">
+		<p><?php $this->pageTitle=Yii::app()->name; ?></p>
+		<p><?php echo CHtml::link("Check In");?></p>
 		
-		$models=  BusRoute::model()->findAll($criteria);
-                
-		 
-// retrieve the models from db
-$models = BusRoute::model()->findAll();
- 
-// format models as $key=>$value with listData
-$list = CHtml::listData($models,'id', 'route_name');
- echo CHtml::dropDownList('route', "routename", 
-              $list,
-              array('empty' => '(Select a category'));
-?>
+		<div data-role="fieldcontain">
+		    <label for="select-native-17">Route:</label>
+		    <select name="select-native-17" id="select-native-17">
+		    <option value="">Select One</option>
+			<?php
+				$criteria=new CDbCriteria;
+				$criteria->condition="status='1'";
+				$route=  BusRoute::model()->findAll($criteria);
+				foreach ($route as $key => $value) {
+					echo "<option value='".$value->id."'>$value->route_name</option>";
+				}
+				
+		    ?>
+		    </select>
+		</div>
+
+		
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+
+<input type="hidden" id="url" value="<?php echo Yii::app()->request->baseUrl;?>">
+
+<script type="text/javascript">
+	var url = $('#url').val();
+	$('select').change(function(){
+		var selectedValue = $(':selected').val(); 
+		$.ajax({
+			type: 'POST',
+			url: url+'/busroute/getList',
+			data: {value:selectedValue},
+			dataType: "json",
+			success:function(response){
+				if(response.value){
+					//console.log(response.value);
+					location.href = url+'/busroute/create';
+
+				}
+			}
+		});
+	});
+	
+
+</script>
