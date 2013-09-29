@@ -177,4 +177,50 @@ class BusrouteController extends Controller
 		echo json_encode($array);
 	}
 
+	/*public function actionAddCheckedTime(){
+		$value = $_POST['value'];
+		$model = new BusStop();
+		$model = BusStop::model()->findByPk($value);
+		//print_r($model->attributes);die;
+		if($model){
+			$model->created_time = date('Y-m-d H:i:s');
+			$model->update();
+		}
+	}*/
+
+	public function actionAddCheckedTime(){
+		$value = $_POST['value'];
+		$checkId = $this->checkValue($value);
+		//$array = array('msg' => "true");
+		//echo json_encode($array);
+		/*$model = new BusStop();
+		$model = BusStop::model()->findByPk($value);
+		
+		if($model){
+			$model->created_time = date('Y-m-d H:i:s');
+			$model->update();
+		}*/
+	}
+
+	public function checkValue($val){
+		for($i = 3; $i <= $val ; $i++){
+			$model = BusStop::model()->findByAttributes(array('id' => $i));
+			//print_r($model->attributes);
+			if($model->created_time == NULL){
+				$model->created_time = date('Y-m-d H:i:s');
+				$model->update();
+			}
+		}
+		return $i;
+	}
+
+	public function actionRemoveCheckedTime(){
+		$value = $_POST['value'];
+		$model = BusStop::model()->findByPk($value);
+		if($model){
+			$model->created_time = NULL;
+			$model->update();
+		}
+	}
+
 }
