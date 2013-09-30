@@ -15,7 +15,7 @@
 
 	<div data-role="content">
 		<p><?php $this->pageTitle=Yii::app()->name; ?></p>
-		<p><?php echo CHtml::link("Check In");?></p>
+		<p><?php echo CHtml::link("Check In",array('confirm' => 'Please Select Route from the list'),array('class'=>'checkin'));?></p>
 		
 		<div data-role="fieldcontain">
 		    <label for="select-native-17">Route:</label>
@@ -45,23 +45,45 @@
 <input type="hidden" id="url" value="<?php echo Yii::app()->request->baseUrl;?>">
 
 <script type="text/javascript">
-	var url = $('#url').val();
-	$('select').change(function(){
-		var selectedValue = $(':selected').val(); 
-		$.ajax({
-			type: 'POST',
-			url: url+'/busroute/getList',
-			data: {value:selectedValue},
-			dataType: "json",
-			success:function(response){
-				if(response.value){
-					//console.log(response.value);
-					location.href = url+'/busroute/create';
-
-				}
-			}
-		});
-	});
+    $(document).ready(function(){
+        var url = $('#url').val();
+    $('.checkin').click(function(){
+       var selectedValue = $(':selected').val();
+       $.ajax({
+           type: 'POST',
+           url: url+'/busroute/getList',
+           data: {value:selectedValue},
+           dataType: "json",
+           success:function(response){
+               if(response.value){
+                   location.href = url+'/busroute/create';
+               }
+               else
+                   {
+                       alert('Please Select the Route from the list');
+                   }
+           }
+       });
+    });
+    });
+    
+//	var url = $('#url').val();
+//	$('select').change(function(){
+//		var selectedValue = $(':selected').val(); 
+//		$.ajax({
+//			type: 'POST',
+//			url: url+'/busroute/getList',
+//			data: {value:selectedValue},
+//			dataType: "json",
+//			success:function(response){
+//				if(response.value){
+//					//console.log(response.value);
+//					location.href = url+'/busroute/create';
+//
+//				}
+//			}
+//		});
+//	});
 	
 
 </script>
