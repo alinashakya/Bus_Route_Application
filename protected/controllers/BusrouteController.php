@@ -191,6 +191,9 @@ class BusrouteController extends Controller
 	public function actionAddCheckedTime(){
 		$value = $_POST['value'];
 		$checkId = $this->checkValue($value);
+                //echo implode(",", $checkId);
+                echo json_encode($checkId);
+                //print_r($checkId);
 		//$array = array('msg' => "true");
 		//echo json_encode($array);
 		/*$model = new BusStop();
@@ -207,11 +210,12 @@ class BusrouteController extends Controller
 			$model = BusStop::model()->findByAttributes(array('id' => $i));
 			//print_r($model->attributes);
 			if($model->created_time == NULL){
-				$model->created_time = date('Y-m-d H:i:s');
+				$a[]=$i;
+                                $model->created_time = date('Y-m-d H:i:s');
 				$model->update();
 			}
 		}
-		return $i;
+		return $a;
 	}
 
 	public function actionRemoveCheckedTime(){

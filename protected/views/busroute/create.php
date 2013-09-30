@@ -40,6 +40,12 @@ foreach ($bus_route as $value) {
                     data: {value: value},
                     dataType: 'json',
                     success: function(response) {
+                        //alert(response);
+                        $.each(response, function(index, order) {
+                            //myArray.push([order.OrderYear, order.OrderCount]);
+                            //alert(order);
+                            $('#route_chk_'+order).prop('checked',true);
+                        });
                         if (response.msg == 'true') {
 
                         }
