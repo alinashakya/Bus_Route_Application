@@ -3,8 +3,10 @@
 <p><?php echo CHtml::link("Check Out", array('../')); ?></p>
 
 <?php
+if(isset($_GET) && !empty($_GET)){
 $criteria = new CDbCriteria();
-$criteria->condition = 'route_id = 1';
+$criteria->condition = 'route_id ='.$_GET['key'];
+}
 $bus_route = BusStop::model()->findAll($criteria);
 foreach ($bus_route as $value) {
     ?>

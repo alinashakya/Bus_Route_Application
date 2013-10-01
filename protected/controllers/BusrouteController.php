@@ -173,8 +173,18 @@ class BusrouteController extends Controller
 
 	public function actionGetList(){
 		$value = $_POST['value'];
+               
+                
 		$array = array('value' => $value);
 		echo json_encode($array);
+//                if (isset($_POST) && (!empty($_POST))) {
+//            $value = $_POST['value'];
+//            $busstop = BusStop::model()->findAllByAttributes(array('route_id' => $value));
+//            $this->renderP('create', array('data' => $busstop), false, true);
+        //}
+                
+                
+                
 	}
 
 	/*public function actionAddCheckedTime(){
@@ -227,4 +237,15 @@ class BusrouteController extends Controller
 		}
 	}
 
+        public function actionGetBusroute() {
+        if (isset($_POST) && (!empty($_POST))) {
+            $value = $_POST['value'];
+            $busstop = BusStop::model()->findAllByAttributes(array('route_id' => $value));
+            $this->renderPartial('list', array('data' => $busstop), false, true);
+        }
+    } 
+        
+        
+        
+        
 }
