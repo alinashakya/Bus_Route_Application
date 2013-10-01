@@ -2,9 +2,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0-alpha.2/jquery.mobile-1.4.0-alpha.2.min.css" />
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.0-alpha.2/jquery.mobile-1.4.0-alpha.2.min.js"></script>
+<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/media/css/jquery.mobile-1.4.0-alpha.2.min" />
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/media/js/jquery-1.9.1.min"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/media/js/jquery.mobile-1.4.0-alpha.2.min.js"></script>
 
 
 <div data-role="page">
@@ -20,19 +20,21 @@
         <div data-role="fieldcontain">
             <label for="select-native-17">Route:</label>
             <select name="select-native-17" id="select-native-17">
-                <option value="">Select One</option>
+                <!--<option value="">Select One</option>-->
                 <?php
                 $criteria = new CDbCriteria;
                 $criteria->condition = "status='1'";
                 $route = BusRoute::model()->findAll($criteria);
                 foreach ($route as $key => $value) {
-                    echo "<option value='" . $value->id . "'>$value->route_name</option>";
+                    echo "<option value='" . $value->id . "'>$value->route_name ($value->bus_name)</option>";
                 }
                 ?>
             </select>
+
+
         </div>
         <div id="data">
-            <?php echo "this is testing"; ?>
+           
 
         </div>
 
@@ -59,8 +61,8 @@
                 success: function(response) {
 
                     if (response.value) {
-                       
-                        location.href = url + '/busroute/create?key='+response.value;
+
+                        location.href = url + '/busroute/create?key=' + response.value;
                     }
                     else
                     {
@@ -85,6 +87,17 @@
             });
         });
 
+        var selectedvalue = $(':selected').val();
+        $.ajax({
+            type: 'POST',
+            url: url + '/busroute/getbusroute',
+            dataType: 'html',
+            data: {value: selectedvalue},
+            success: function(data) {
+                $('#data').html(data);
+
+            },
+        });
     });
 
 //	var url = $('#url').val();
