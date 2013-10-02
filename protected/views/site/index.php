@@ -88,7 +88,6 @@
         });
 
         var selectedvalue = $(':selected').val();
-        console.log(selectedvalue);
         $.ajax({
             type: 'POST',
             url: url + '/busroute/getbusroute',
@@ -96,8 +95,7 @@
             data: {value: selectedvalue},
             success: function(data) {
                 $('#data').html(data);
-
-            },
+            }
         });
     });
 

@@ -173,9 +173,7 @@ class BusrouteController extends Controller
 
 	public function actionGetList(){
 		$value = $_POST['value'];
-               
-                
-		$array = array('value' => $value);
+        $array = array('value' => $value);
 		echo json_encode($array);
 //                if (isset($_POST) && (!empty($_POST))) {
 //            $value = $_POST['value'];
@@ -214,11 +212,8 @@ class BusrouteController extends Controller
                 $model->created_time = date('Y-m-d H:i:s');
 				$model->update();
 			}
-
 		}
-
 		return $a;
-
 	}
 
 	public function actionRemoveCheckedTime(){
@@ -260,10 +255,14 @@ class BusrouteController extends Controller
         if (isset($_POST) && (!empty($_POST))) {
             $value = $_POST['value'];
             $busstop = BusStop::model()->findAllByAttributes(array('route_id' => $value));
+            /*foreach ($busstop as $key) {
+            	echo "<pre>";
+            	print_r($key->attributes);
+            }die;*/
             $criteria = new CDbCriteria;
             $criteria->condition = 'route_id ='.$value;
             $criteria->order = 'created_time DESC, id DESC';
-                    
+                   
             $lastcheckedinobj = BusStop::model()->find($criteria);
             $lastcheckedin = $lastcheckedinobj->created_time;
             $lastcheckedname = $lastcheckedinobj->stop_name;

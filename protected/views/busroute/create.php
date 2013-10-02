@@ -4,24 +4,19 @@
 
 <?php
 if(isset($_GET) && !empty($_GET)){
-$criteria = new CDbCriteria();
-$criteria->condition = 'route_id ='.$_GET['key'];
+    $criteria = new CDbCriteria();
+    $criteria->condition = 'route_id ='.$_GET['key'];
+    $bus_route = BusStop::model()->findAll($criteria);
 }
-$bus_route = BusStop::model()->findAll($criteria);
-
-foreach ($bus_route as $value) {
-    ?>
+foreach ($bus_route as $value) { 
+?>
 
     <?php $date = date('h:i', strtotime($value->time)); ?>
     <div>
         <ul>
             <li>
                 <?php echo ucfirst($value->stop_name); ?>
-                <?php if ($value->created_time != NULL) { ?>
-                    <input type = "checkbox" class="chk" name="route_chk[]" id="<?php echo "route_chk_" . $value->id ?>" value="<?php echo $value->id; ?>" checked="checked"/>
-                <?php } else { ?>
-                    <input type = "checkbox" class="chk" name="route_chk[]" id="<?php echo "route_chk_" . $value->id ?>" value="<?php echo $value->id; ?>"/>
-                <?php } ?>
+                <input type = "checkbox" class="chk" name="route_chk[]" id="<?php echo "route_chk_" . $value->id ?>" value="<?php echo $value->id;?>" <?php if(isset($value->created_time)){echo "checked='checked'";} ?>/>
             </li>
         </ul>
     </div>
@@ -47,7 +42,6 @@ foreach ($bus_route as $value) {
                     data: {value: value,route_id:route_id},
                     dataType: 'json',
                     success: function(response) {
-                        //alert(response);
                         $.each(response, function(index, order) {
                             $('#route_chk_'+order).prop('checked',true);
                         });
