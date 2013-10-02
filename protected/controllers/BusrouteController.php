@@ -200,28 +200,16 @@ class BusrouteController extends Controller
 
 	public function actionAddCheckedTime(){
 		$value = $_POST['value'];
-		$checkId = $this->checkValue($value);
-		//print_r($checkId);die;
-                //echo implode(",", $checkId);
-                echo json_encode($checkId);
-                //print_r($checkId);
-		//$array = array('msg' => "true");
-		//echo json_encode($array);
+		$route_id = $_POST['route_id'];
+		$checkId = $this->checkValue($value,$route_id);
+		 echo json_encode($checkId);
+    }
 
-		/*$model = new BusStop();
-		$model = BusStop::model()->findByPk($value);
-		
-		if($model){
-			$model->created_time = date('Y-m-d H:i:s');
-			$model->update();
-		}*/
-	}
-
-	public function checkValue($val){
-		for($i = 3; $i <= $val ; $i++){
+	public function checkValue($val,$route){
+		for($i = $val; $i >= 1 ; $i--){
 			$model = BusStop::model()->findByAttributes(array('id' => $i));
 			//print_r($model->attributes);
-			if($model->created_time == NULL){
+			if($model->created_time == NULL && $model->route_id == $route){
 				$a[]=$i;
                 $model->created_time = date('Y-m-d H:i:s');
 				$model->update();
@@ -255,7 +243,8 @@ class BusrouteController extends Controller
 		echo json_encode($array);
 	}
 
-	public function actionGetBusroute() {
+
+	/*public function actionGetBusroute() {
 		if (isset($_POST) && (!empty($_POST))) {
 		    $value = $_POST['value'];
 		    $busstop = BusStop::model()->findAllByAttributes(array('route_id' => $value));
@@ -265,7 +254,23 @@ class BusrouteController extends Controller
 		    }die;
 		    $this->renderPartial('list', array('data' => $busstop), false, true);
 		}
-	} 
+	}*/ 
+
+        public function actionGetBusroute() {
+        if (isset($_POST) && (!empty($_POST))) {
+            $value = $_POST['value'];
+            $busstop = BusStop::model()->findAllByAttributes(array('route_id' => $value));
+            $criteria = new CDbCriteria;
+            $criteria->condition = 'route_id ='.$value;
+            $criteria->order = 'created_time DESC, id DESC';
+                    
+            $lastcheckedinobj = BusStop::model()->find($criteria);
+            $lastcheckedin = $lastcheckedinobj->created_time;
+            $lastcheckedname = $lastcheckedinobj->stop_name;
+            $this->renderPartial('list', array('data' => $busstop,'lastcheckedin' => $lastcheckedin,'lastcheckedname'=>$lastcheckedname), false, true);
+        }
+    } 
+
         
         
         

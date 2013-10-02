@@ -1,4 +1,4 @@
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/media/js/jquery-1.9.1.min"></script>
 
 <p><?php echo CHtml::link("Check Out", array('../')); ?></p>
 
@@ -29,6 +29,7 @@ foreach ($bus_route as $value) {
 <?php } ?>
 
 <input type="hidden" id="url" value="<?php echo Yii::app()->request->baseUrl; ?>">
+<input type="hidden" id="bus_route" value="<?php echo $_GET['key']; ?>">
 
 <script type="text/javascript">
 
@@ -39,10 +40,11 @@ foreach ($bus_route as $value) {
             var checkbox = $(this);
             if (checkbox.is(':checked')) {
                 var value = checkbox.val();
+                var route_id = $('#bus_route').val();
                 $.ajax({
                     type: 'POST',
                     url: url + '/busroute/addCheckedTime',
-                    data: {value: value},
+                    data: {value: value,route_id:route_id},
                     dataType: 'json',
                     success: function(response) {
                         //alert(response);
