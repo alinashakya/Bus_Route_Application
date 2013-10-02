@@ -173,8 +173,18 @@ class BusrouteController extends Controller
 
 	public function actionGetList(){
 		$value = $_POST['value'];
+               
+                
 		$array = array('value' => $value);
 		echo json_encode($array);
+//                if (isset($_POST) && (!empty($_POST))) {
+//            $value = $_POST['value'];
+//            $busstop = BusStop::model()->findAllByAttributes(array('route_id' => $value));
+//            $this->renderP('create', array('data' => $busstop), false, true);
+        //}
+                
+                
+                
 	}
 
 	/*public function actionAddCheckedTime(){
@@ -191,8 +201,13 @@ class BusrouteController extends Controller
 	public function actionAddCheckedTime(){
 		$value = $_POST['value'];
 		$checkId = $this->checkValue($value);
-		$array = array('msg' => "success", 'check_id' => $value);
-		echo json_encode($array);
+		//print_r($checkId);die;
+                //echo implode(",", $checkId);
+                echo json_encode($checkId);
+                //print_r($checkId);
+		//$array = array('msg' => "true");
+		//echo json_encode($array);
+
 		/*$model = new BusStop();
 		$model = BusStop::model()->findByPk($value);
 		
@@ -207,21 +222,52 @@ class BusrouteController extends Controller
 			$model = BusStop::model()->findByAttributes(array('id' => $i));
 			//print_r($model->attributes);
 			if($model->created_time == NULL){
-				$model->created_time = date('Y-m-d H:i:s');
+				$a[]=$i;
+                $model->created_time = date('Y-m-d H:i:s');
 				$model->update();
 			}
 
 		}
-		return true;
+
+		return $a;
+
 	}
 
 	public function actionRemoveCheckedTime(){
-		$value = $_POST['value'];
+		/*$value = $_POST['value'];
 		$model = BusStop::model()->findByPk($value);
 		if($model){
 			$model->created_time = NULL;
 			$model->update();
+		}*/
+		$value = $_POST['value'];
+		$model = BusStop::model()->findByPk($value);
+		$time = $model->created_time;
+		$unchecked = BusStop::model()->findAllByAttributes(array('created_time' => $time));
+		foreach ($unchecked as $value) {
+			//print_r($value->attributes);
+			$id = $value->id;
+			$value->created_time = NULL;
+			$array[] = $id;
+			$value->update();
 		}
+		//print_r($array);die;
+		echo json_encode($array);
 	}
 
+	public function actionGetBusroute() {
+		if (isset($_POST) && (!empty($_POST))) {
+		    $value = $_POST['value'];
+		    $busstop = BusStop::model()->findAllByAttributes(array('route_id' => $value));
+		    foreach ($busstop as $value) {
+		    	echo "<pre>"; //echo $value->created_time;
+		    	echo date('h:i A', strtotime($value->created_time));
+		    }die;
+		    $this->renderPartial('list', array('data' => $busstop), false, true);
+		}
+	} 
+        
+        
+        
+        
 }
