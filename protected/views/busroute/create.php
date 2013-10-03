@@ -1,31 +1,4 @@
-<head>
-<?php
-$script = Yii::app()->clientScript;
-$script->registerCssFile(Yii::app()->request->baseUrl . '/media/css/themes/default/jquery.mobile-1.2.1.min.css');
-$script->registerCssFile(Yii::app()->request->baseUrl . '/media/css/style.css');
-$script->registerScriptFile(Yii::app()->request->baseUrl . '/media/js/jquery.js');
-$script->registerScriptFile(Yii::app()->request->baseUrl . '/media/js/jquery.mobile-1.2.1.min.js');
-?>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Leapfrog Bus Route</title>
-</head>
 
-<body>
-<div class="conatiner" data-role="page">
-  <div data-role="header">
-    <header>
-      <div class="logo"> <a href="index.html">
-        <h1>Leapfrog Technology</h1>
-        </a> </div>
-      <!--end of logo-->
-      
-      <div class="menu"> <a class="home-icon" href="index.html">Home</a> </div>
-    </header>
-  </div>
-  <!-- /header -->
-  
-  <div class="content" data-role="content">
   
     <p><?php echo CHtml::link("Check Out", array('../')); ?></p>
 
@@ -72,20 +45,7 @@ $script->registerScriptFile(Yii::app()->request->baseUrl . '/media/js/jquery.mob
 </section>
        
   
-  </div>
-  <!-- /content -->
-  
-  <div data-role="footer">
-    <footer>
-      <p>Copyright @ Leapfrog Technology.com</p>
-    </footer>
-  </div>
-  <!-- /header --> 
-  
-</div>
-<!-- /page -->
-</body>
-</html>
+ 
 
 <input type="hidden" id="url" value="<?php echo Yii::app()->request->baseUrl; ?>">
 <input type="hidden" id="bus_route" value="<?php echo $_GET['key']; ?>">
@@ -118,8 +78,7 @@ $(document).ready(function() {
 
     function getValue(data_id){
         var checkbox = $('#route_chk_'+data_id);
-        console.log(checkbox);
-            if (checkbox.is(':checked') == false) {
+        if (checkbox.is(':checked') == false) {
 
                 var value = $('#route_chk_'+data_id).val();
                 console.log(value);
@@ -156,6 +115,4 @@ $(document).ready(function() {
                 });
             }
     }
-
-
 </script>
