@@ -27,7 +27,7 @@
   <div data-role="header">
     <header>
       <div class="logo">
-        <a href="index.html"> <h1>Leapfrog Technology</h1></a>
+        <h1>Leapfrog Technology</h1>
       </div>
       <!--end of logo--> 
       
@@ -43,7 +43,7 @@
 
 <div data-role="footer">
     <footer>
-      <p>Copyright @ Leapfrog Technology.com</p>
+      <p>Copyright © 2011 Leapfrog Technology, Inc. All rights reserved.</p>
     </footer>
   </div>
   <!-- /header --> 
