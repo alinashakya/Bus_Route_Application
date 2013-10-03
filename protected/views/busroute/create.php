@@ -1,8 +1,9 @@
-
-  
-    <p><?php echo CHtml::link("Check Out", array('../')); ?></p>
-
 <section>
+<div class="btn-wrap checkout">
+  
+    <?php echo CHtml::link("Check Out", array('../'),array('class' => 'checkin ui-link')); ?>
+</div>
+
      <div class="select-wrap">
         <div class="select-content">
           <p class="heading">Bhaktapur to Office</p>

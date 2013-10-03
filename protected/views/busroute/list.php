@@ -7,29 +7,28 @@
 ?>
 
   <?php if($lastcheckedin != NULL): ?>
-<label for="select-native-17">Last Checked In Stop Time:<?php echo $lastcheckedname.',&nbsp;'.date('h:i A',strtotime($lastcheckedin));  ?></label>
- <hr>
+<label class="ui-li ui-li-static ui-btn-up-c lastchecked" for="select-native-17">Last Checked In Stop Time&nbsp;&nbsp;:&nbsp;&nbsp;<?php echo $lastcheckedname.',&nbsp;'.date('h:i A',strtotime($lastcheckedin));  ?></label>
+ 
  <?php endif; ?>
 
 
- <ul class="places-display" data-role="listview" data-inset="true">
-      
-    
+ <ul class="places-display ui-listview ui-listview-inset ui-corner-all ui-shadow" data-inset="true" data-role="listview">
 
 <?php 
 
 foreach($data as $data){
-    
+    ?>
+     <li class="ui-li ui-li-static ui-btn-up-c">
+     <?php
 $stopname = $data['stop_name'];
 $time = $data['time'];
-echo ucfirst($stopname).':'.date('h:i A',strtotime($time));
-echo "<br/>";
+echo ucfirst($stopname);
+echo '<em>'.date('h:i A',strtotime($time)).'</em>';
 
-   
-
-}
+  }
 
 
 
 
 ?>
+     </li>

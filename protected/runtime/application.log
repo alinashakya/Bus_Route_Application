@@ -3795,3 +3795,69 @@ Stack trace:
 REQUEST_URI=/Bus_Route_Application/media/css/images/ajax-loader.gif
 HTTP_REFERER=http://localhost/Bus_Route_Application/media/css/jquery.mobile-1.4.0-alpha.2.min
 ---
+2013/10/03 14:30:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.html".' in /var/www/Bus_Route_Application/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(270): CController->missingAction('index.html')
+#1 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('index.html')
+#2 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('busroute/index....')
+#3 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_Application/busroute/index.html
+HTTP_REFERER=http://localhost/Bus_Route_Application/busroute/create?key=1
+---
+2013/10/03 14:30:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.html".' in /var/www/Bus_Route_Application/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(270): CController->missingAction('index.html')
+#1 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('index.html')
+#2 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('busroute/index....')
+#3 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_Application/busroute/index.html
+HTTP_REFERER=http://localhost/Bus_Route_Application/busroute/create?key=1
+---
+2013/10/03 14:30:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.html".' in /var/www/Bus_Route_Application/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(270): CController->missingAction('index.html')
+#1 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('index.html')
+#2 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('busroute/index....')
+#3 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_Application/busroute/index.html
+HTTP_REFERER=http://localhost/Bus_Route_Application/busroute/create?key=1
+---
+2013/10/03 14:30:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.html".' in /var/www/Bus_Route_Application/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(270): CController->missingAction('index.html')
+#1 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('index.html')
+#2 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('busroute/index....')
+#3 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_Application/busroute/index.html
+HTTP_REFERER=http://localhost/Bus_Route_Application/busroute/create?key=1
+---
+2013/10/03 14:30:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.html".' in /var/www/Bus_Route_Application/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(270): CController->missingAction('index.html')
+#1 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('index.html')
+#2 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('busroute/index....')
+#3 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_Application/busroute/index.html
+HTTP_REFERER=http://localhost/Bus_Route_Application/busroute/create?key=1
+---
+2013/10/03 14:30:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.html".' in /var/www/Bus_Route_Application/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/Bus_Route_Application/framework/web/CController.php(270): CController->missingAction('index.html')
+#1 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(282): CController->run('index.html')
+#2 /var/www/Bus_Route_Application/framework/web/CWebApplication.php(141): CWebApplication->runController('busroute/index....')
+#3 /var/www/Bus_Route_Application/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/Bus_Route_Application/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Bus_Route_Application/busroute/index.html
+HTTP_REFERER=http://localhost/Bus_Route_Application/busroute/create?key=1
+---
