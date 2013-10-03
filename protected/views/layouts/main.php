@@ -4,40 +4,50 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="en" />
-
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- blueprint CSS framework -->
-        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />
-        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print" />
         <!--[if lt IE 8]>
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
         <![endif]-->
+        <?php
+        $script = Yii::app()->clientScript;
+        $script->registerCssFile(Yii::app()->request->baseUrl . '/media/css/themes/default/jquery.mobile-1.2.1.min.css');
+        $script->registerCssFile(Yii::app()->request->baseUrl . '/media/css/style.css');
+        $script->registerScriptFile(Yii::app()->request->baseUrl . '/media/js/jquery.js');
+        $script->registerScriptFile(Yii::app()->request->baseUrl . '/media/js/jquery.mobile-1.2.1.min.js');
+        ?>
+        
 
-        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
-        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
-
-        <title><?php echo "Bus Route Application"; ?></title>
+        <title><?php echo "Leapfrog Bus Route";?></title>
     </head>
 
     <body>
 
-        <div class="container" id="page">
-
-            <div id="header">
-                <div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
-            </div><!-- header -->
-
-            <?php if (!(Yii::app()->user->isGuest)): ?>
-                <div id="mainmenu">
-
-                </div><!-- mainmenu -->
-            <?php endif; ?>
-            <div id="content">
-                <?php echo $content; ?>
+       <div class="container" data-role="page">
+  <div data-role="header">
+    <header>
+      <div class="logo">
+        <a href="index.html"> <h1>Leapfrog Technology</h1></a>
+      </div>
+      <!--end of logo--> 
+      
+    </header>
+  </div>
+  <!-- /header -->
+  
+            <div class="content" data-role="content">
+                <?php  echo $content; ?>
             </div>
 
             <div class="clear"></div>
 
-
+<div data-role="footer">
+    <footer>
+      <p>Copyright @ Leapfrog Technology.com</p>
+    </footer>
+  </div>
+  <!-- /header --> 
+  
 
         </div><!-- page -->
 

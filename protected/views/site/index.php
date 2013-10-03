@@ -1,49 +1,39 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/media/css/jquery.mobile-1.4.0-alpha.2.min" />
-<script src="<?php echo Yii::app()->request->baseUrl; ?>/media/js/jquery-1.9.1.min"></script>
-<script src="<?php echo Yii::app()->request->baseUrl; ?>/media/js/jquery.mobile-1.4.0-alpha.2.min.js"></script>
+<section>
+  <div class="select-wrap">
+    <div class="select-content">
+      <p class="heading">Select Bus Route - <?php echo Yii::app()->name;?></p>
+      <select>
+      <?php
+        $criteria = new CDbCriteria;
+        $criteria->condition = "status='1'";
+        $criteria->order = "route_name ASC";
 
+        $route = BusRoute::model()->findAll($criteria);
 
-<div data-role="page">
+        foreach ($route as $key => $value) {
+            echo "<option value='" . $value->id . "'>$value->route_name ($value->bus_name)</option>";
+        }
+      ?>
+      </select>
+    </div>
+    <!--end of select-content-->
+    
+    <div class="btn-wrap">
+      <!--<input type="button" value="Check In">-->
+      <!--<a href="checkin.html">Check In</a>-->
+      <?php echo CHtml::link("Check In", array('confirm' => 'Please Select Route from the list'), array('class' => 'checkin')); ?>
+    </div>
+  </div>
+  <!--end of select-wrap-->
 
-    <div data-role="header">
-        <h1>Page Title</h1>
-    </div><!-- /header -->
+  <div class="sets">
+   
+  </div>
+</section>
+  
+  
+  
 
-    <div data-role="content">
-        <p><?php $this->pageTitle = Yii::app()->name; ?></p>
-        <p><?php echo CHtml::link("Check In", array('confirm' => 'Please Select Route from the list'), array('class' => 'checkin')); ?></p>
-
-        <div data-role="fieldcontain">
-            <label for="select-native-17">Route:</label>
-            <select name="select-native-17" id="select-native-17">
-                <!--<option value="">Select One</option>-->
-                <?php
-                $criteria = new CDbCriteria;
-                $criteria->condition = "status='1'";
-                $criteria->order = "route_name ASC";
-                
-                $route = BusRoute::model()->findAll($criteria);
-
-                foreach ($route as $key => $value) {
-                    echo "<option value='" . $value->id . "'>$value->route_name ($value->bus_name)</option>";
-                }
-                ?>
-            </select>
-
-
-        </div>
-        <div id="data">
-           
-
-        </div>
-
-    </div><!-- /content -->
-
-    <div data-role="footer">
-        <h4>Page Footer</h4>
-    </div><!-- /footer -->
-</div><!-- /page -->
 
 
 <input type="hidden" id="url" value="<?php echo Yii::app()->request->baseUrl; ?>">
@@ -81,41 +71,23 @@
                 dataType: 'html',
                 data: {value: selectedvalue},
                 success: function(data) {
-                    $('#data').html(data);
+                    $('.sets').html(data);
 
                 },
             });
         });
 
         var selectedvalue = $(':selected').val();
-        $.ajax({
+       // alert(selectedvalue);
+                $.ajax({
             type: 'POST',
             url: url + '/busroute/getbusroute',
             dataType: 'html',
             data: {value: selectedvalue},
             success: function(data) {
-                $('#data').html(data);
+                $('.sets').html(data);
             }
         });
     });
-
-//  var url = $('#url').val();
-//  $('select').change(function(){
-//      var selectedValue = $(':selected').val(); 
-//      $.ajax({
-//          type: 'POST',
-//          url: url+'/busroute/getList',
-//          data: {value:selectedValue},
-//          dataType: "json",
-//          success:function(response){
-//              if(response.value){
-//                  //console.log(response.value);
-//                  location.href = url+'/busroute/create';
-//
-//              }
-//          }
-//      });
-//  });
-
-
 </script>
+

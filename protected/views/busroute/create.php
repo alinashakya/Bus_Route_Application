@@ -1,49 +1,98 @@
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/media/js/jquery-1.9.1.min"></script>
 
-<p><?php echo CHtml::link("Check Out", array('../')); ?></p>
+  
+    <p><?php echo CHtml::link("Check Out", array('../')); ?></p>
 
-<?php
-if(isset($_GET) && !empty($_GET)){
-    $criteria = new CDbCriteria();
-    $criteria->condition = 'route_id ='.$_GET['key'];
-    $bus_route = BusStop::model()->findAll($criteria);
-}
-foreach ($bus_route as $value) { 
-?>
-
-    <?php $date = date('h:i', strtotime($value->time)); ?>
-    <div>
-        <ul>
+<section>
+     <div class="select-wrap">
+        <div class="select-content">
+          <p class="heading">Bhaktapur to Office</p>
+          <div class="sets places-wrap">
+            <?php
+            if(isset($_GET) && !empty($_GET)){
+            $criteria = new CDbCriteria();
+            $criteria->condition = 'route_id ='.$_GET['key'];
+            $bus_route = BusStop::model()->findAll($criteria);
+            }
+            foreach ($bus_route as $value) { 
+            ?>
+            <?php $date = date('h:i', strtotime($value->time)); ?>
+            <?php if(isset($value->created_time)){?>
+            <div class="place-checkin" id="<?php echo 'place_'.$value->id;?>" data-id="<?php echo $value->id;?>"> <a class="clickable-place oncheck " href="#">
+            <ul>
             <li>
                 <?php echo ucfirst($value->stop_name); ?>
                 <input type = "checkbox" class="chk" name="route_chk[]" id="<?php echo "route_chk_" . $value->id ?>" value="<?php echo $value->id;?>" <?php if(isset($value->created_time)){echo "checked='checked'";} ?>/>
             </li>
-        </ul>
-    </div>
+            </ul> 
+            </a>
+            </div>
+            <?php } else { ?>
+                <div class="place-checkin" id="<?php echo 'place_'.$value->id;?>" data-id="<?php echo $value->id;?>"> <a class="clickable-place default " href="#">
+            <ul>
+            <li>
+                <?php echo ucfirst($value->stop_name); ?>
+                <input type = "checkbox" class="chk" name="route_chk[]" id="<?php echo "route_chk_" . $value->id ?>" value="<?php echo $value->id;?>"/>
+            </li>
+            </ul> 
+            </a>
+            </div>
+            <?php } ?>
 
-<?php } ?>
+            <?php } ?>
+        </div>
+        </div>
+    </div>
+</section>
+       
+  
+ 
 
 <input type="hidden" id="url" value="<?php echo Yii::app()->request->baseUrl; ?>">
 <input type="hidden" id="bus_route" value="<?php echo $_GET['key']; ?>">
 
 <script type="text/javascript">
 
-    $(document).ready(function() {
-        var url = $('#url').val();
-        $('.chk').click(function() {
-            //var checked = $(this).val();
-            var checkbox = $(this);
-            if (checkbox.is(':checked')) {
-                var value = checkbox.val();
+var baseurl; 
+
+$(document).ready(function() {
+    baseurl = $('#url').val();
+    $('.place-checkin').click(function(){
+        var data_id = $(this).attr('data-id');
+        getValue(data_id);
+    });
+
+    $('.chk').click(function(){
+        var clicked_value = $(this).val();
+        if ($(this).is(':checked')){
+            $(this).prop('checked', false);
+        } else {
+            $(this).prop('checked', true);
+        }
+        getValue(clicked_value);
+        return false;
+    });
+
+   
+    
+});
+
+    function getValue(data_id){
+        var checkbox = $('#route_chk_'+data_id);
+        if (checkbox.is(':checked') == false) {
+
+                var value = $('#route_chk_'+data_id).val();
+                console.log(value);
                 var route_id = $('#bus_route').val();
                 $.ajax({
                     type: 'POST',
-                    url: url + '/busroute/addCheckedTime',
+                    url: baseurl + '/busroute/addCheckedTime',
                     data: {value: value,route_id:route_id},
                     dataType: 'json',
                     success: function(response) {
                         $.each(response, function(index, order) {
                             $('#route_chk_'+order).prop('checked',true);
+                            $('#place_'+order+' a').removeClass('default');
+                            $('#place_'+order+' a').addClass('oncheck');
                         });
                         
                     }
@@ -52,20 +101,18 @@ foreach ($bus_route as $value) {
                 var value = checkbox.val();
                 $.ajax({
                     type: 'POST',
-                    url: url + '/busroute/removeCheckedTime',
+                    url: baseurl + '/busroute/removeCheckedTime',
                     data: {value: value},
                     dataType: 'json',
                     success: function(response) {
                         $.each(response, function(index, order) {
                             $('#route_chk_'+order).prop('checked',false);
+                            $('#place_'+order+' a').removeClass('oncheck');
+                            $('#place_'+order+' a').addClass('default');
                         });
                         
                     }
                 });
             }
-
-        });
-    });
-
-
+    }
 </script>
