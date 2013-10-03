@@ -6,7 +6,7 @@
  */
 ?>
   <?php if($lastcheckedin != NULL): ?>
- <label for="select-native-17">Last Checked In Stop Time:<?php echo $lastcheckedname.',&nbsp;'.$lastcheckedin;  ?></label>
+<label for="select-native-17">Last Checked In Stop Time:<?php echo $lastcheckedname.',&nbsp;'.date('h:i A',strtotime($lastcheckedin));  ?></label>
  <hr>
  <?php endif; ?>
 
@@ -16,7 +16,7 @@ foreach($data as $data){
     
 $stopname = $data['stop_name'];
 $time = $data['time'];
-echo ucfirst($stopname).':'.$time;
+echo ucfirst($stopname).':'.date('h:i A',strtotime($time));
 echo "<br/>";
 
    
