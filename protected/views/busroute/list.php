@@ -6,7 +6,24 @@
  */
 ?>
 
-<?php //echo $lastcheckedin; ?>
+<?php
+
+	date_default_timezone_set('Asia/Kathmandu');
+
+// $script_tz = date_default_timezone_get();
+
+// if (strcmp($script_tz, ini_get('date.timezone'))){
+//     echo 'Script timezone differs from ini-set timezone.';
+// } else {
+//     echo 'Script timezone and ini-set timezone match.';
+// }
+
+
+	// $date = date('h:i A',strtotime($lastcheckedin));
+	// $time = $date->setTimezone(new DateTimeZone('Asia/Kathmandu'));
+	// echo $time;
+	// die;
+?>
 <?php if($lastcheckedin != NULL): ?>
 	<label class="ui-li ui-li-static ui-btn-up-c lastchecked" for="select-native-17">Last Checked In Stop Time&nbsp;&nbsp;:&nbsp;&nbsp;<?php echo $lastcheckedname.',&nbsp;'.date('h:i A',strtotime($lastcheckedin));  ?></label>
  <?php endif; ?>

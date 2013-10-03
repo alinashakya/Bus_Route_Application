@@ -22,7 +22,7 @@
             ?>
             <?php $date = date('h:i', strtotime($value->time)); ?>
             <?php if(isset($value->created_time)){?>
-            <div class="place-checkin" id="<?php echo 'place_'.$value->id;?>" data-id="<?php echo $value->id;?>"> <a class="clickable-place oncheck " href="#"><em><?php echo date('h:i A',strtotime($value->created_time));?></em>
+            <div class="place-checkin" id="<?php echo 'place_'.$value->id;?>" data-id="<?php echo $value->id;?>"> <a class="clickable-place oncheck " href="#">
             <ul>
             <li>
                 <?php echo ucfirst($value->stop_name);?>
