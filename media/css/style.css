@@ -221,6 +221,17 @@ footer p {
 	-o-border-radius: 3px;
 }
 
+.ui-checkbox{
+
+	float: left;
+}
+
+.ui-checkbox input, .ui-radio input{
+	margin: 7px 8px 0 0;
+	position: static;
+	top: 0;
+	left: 0;
+}
 
 .btn-wrap .ui-btn-inner {
 	background-color: #32A943;
@@ -252,6 +263,10 @@ footer p {
 .checkout
 {
     margin-bottom: 10px;
+}
+
+.ui-loader{
+	display: none !important;
 }
 
 /*===================================Media Queries=============================*/

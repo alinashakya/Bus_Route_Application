@@ -204,6 +204,7 @@ class BusrouteController extends Controller
     }
 
 	public function checkValue($val,$route){
+		// date_default_timezone_set('Asia/Kathmandu');
 		for($i = $val; $i >= 1 ; $i--){
 			$model = BusStop::model()->findByAttributes(array('id' => $i));
 			//print_r($model->attributes);
