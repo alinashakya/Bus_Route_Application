@@ -21,8 +21,9 @@
             <div class="place-checkin" id="<?php echo 'place_'.$value->id;?>" data-id="<?php echo $value->id;?>"> <a class="clickable-place oncheck " href="#">
             <ul>
             <li>
-                <?php echo ucfirst($value->stop_name); ?>
+                <?php echo ucfirst($value->stop_name);?>
                 <input type = "checkbox" class="chk" name="route_chk[]" id="<?php echo "route_chk_" . $value->id ?>" value="<?php echo $value->id;?>" <?php if(isset($value->created_time)){echo "checked='checked'";} ?>/>
+                
             </li>
             </ul> 
             </a>
@@ -33,6 +34,7 @@
             <li>
                 <?php echo ucfirst($value->stop_name); ?>
                 <input type = "checkbox" class="chk" name="route_chk[]" id="<?php echo "route_chk_" . $value->id ?>" value="<?php echo $value->id;?>"/>
+
             </li>
             </ul> 
             </a>

@@ -31,4 +31,6 @@ echo '<em>'.date('h:i A',strtotime($time)).'</em>';
 
 
 ?>
-     </li>
+</ul>
+
+
