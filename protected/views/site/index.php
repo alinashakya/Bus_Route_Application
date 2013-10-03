@@ -1,7 +1,7 @@
 <section>
   <div class="select-wrap">
     <div class="select-content">
-      <p class="heading">Select Bus Route - <?php echo Yii::app()->name;?></p>
+      <p class="heading">Select Bus Route</p>
       <select>
       <?php
         $criteria = new CDbCriteria;

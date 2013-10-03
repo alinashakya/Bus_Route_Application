@@ -17,12 +17,11 @@
             ?>
             <?php $date = date('h:i', strtotime($value->time)); ?>
             <?php if(isset($value->created_time)){?>
-            <div class="place-checkin" id="<?php echo 'place_'.$value->id;?>" data-id="<?php echo $value->id;?>"> <a class="clickable-place oncheck " href="#">
+            <div class="place-checkin" id="<?php echo 'place_'.$value->id;?>" data-id="<?php echo $value->id;?>"> <a class="clickable-place oncheck " href="#"><em><?php echo date('h:i A',strtotime($value->created_time));?></em>
             <ul>
             <li>
                 <?php echo ucfirst($value->stop_name);?>
                 <input type = "checkbox" class="chk" name="route_chk[]" id="<?php echo "route_chk_" . $value->id ?>" value="<?php echo $value->id;?>" <?php if(isset($value->created_time)){echo "checked='checked'";} ?>/>
-                
             </li>
             </ul> 
             </a>
@@ -93,6 +92,7 @@ $(document).ready(function() {
                     success: function(response) {
                         $.each(response, function(index, order) {
                             $('#route_chk_'+order).prop('checked',true);
+                            //$('#place_'+order a)
                             $('#place_'+order+' a').removeClass('default');
                             $('#place_'+order+' a').addClass('oncheck');
                         });
