@@ -43,7 +43,7 @@
 
 <div data-role="footer">
     <footer>
-      <p>Copyright © 2011 Leapfrog Technology, Inc. All rights reserved.</p>
+      <p>Copyright © 2013 Leapfrog Technology, Inc. All rights reserved.</p>
     </footer>
   </div>
   <!-- /header --> 

@@ -8,6 +8,8 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Bus Route Application',
+	'timeZone' => 'Asia/Kathmandu',
+
 
 	// preloading 'log' component
 	'preload'=>array('log'),

@@ -1,19 +1,24 @@
-
-  
-    <p><?php echo CHtml::link("Check Out", array('../')); ?></p>
-
 <section>
+<div class="btn-wrap checkout">
+  
+    <?php echo CHtml::link("Check Out", array('../'),array('class' => 'checkin ui-link')); ?>
+</div>
+   <?php
+            if(isset($_GET) && !empty($_GET)){
+            $bus_route = BusRoute::model()->findByAttributes(array('id' => $_GET['key']));
+            }?>
      <div class="select-wrap">
         <div class="select-content">
-          <p class="heading">Bhaktapur to Office</p>
+          <p class="heading"><?php echo $bus_route->route_name;?></p>
           <div class="sets places-wrap">
+            <p style="font-size:16px"><strong>Check In at your Stop</strong></p><br/>
             <?php
             if(isset($_GET) && !empty($_GET)){
             $criteria = new CDbCriteria();
             $criteria->condition = 'route_id ='.$_GET['key'];
-            $bus_route = BusStop::model()->findAll($criteria);
+            $bus_stop = BusStop::model()->findAll($criteria);
             }
-            foreach ($bus_route as $value) { 
+            foreach ($bus_stop as $value) { 
             ?>
             <?php $date = date('h:i', strtotime($value->time)); ?>
             <?php if(isset($value->created_time)){?>
