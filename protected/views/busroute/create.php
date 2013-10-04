@@ -66,6 +66,7 @@ $(document).ready(function() {
 
     $('.chk').click(function(){
         var clicked_value = $(this).val();
+        $('#loading').css('display', '');
         if ($(this).is(':checked')){
             $(this).prop('checked', false);
         } else {
