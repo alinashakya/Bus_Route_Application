@@ -197,27 +197,27 @@ class BusrouteController extends Controller
 	}*/
 
 	public function actionAddCheckedTime(){
-		date_default_timezone_set('Asia/Kathmandu');
 		$value = $_POST['value'];
 		$route_id = $_POST['route_id'];
-		$checkId = $this->checkValue($value,$route_id);
-		$var = array('id'=>$checkId,'dat'=>date('h:i:A'));
-		 echo json_encode($var);
+		$data = $this->checkValue($value,$route_id);
+		 echo json_encode($data);
     }
 
 	public function checkValue($val,$route){
-		date_default_timezone_set('Asia/Kathmandu');
-		$a = array();
+            $data = array();
 		for($i = $val; $i >= 1 ; $i--){
 			$model = BusStop::model()->findByAttributes(array('id' => $i));
 			//print_r($model->attributes);
 			if($model->created_time == NULL && $model->route_id == $route){
-				$a[]=$i;
-                $model->created_time = date('Y-m-d H:i:s');
+                                $date = new DateTime();
+                                $date->setTimezone(new DateTimeZone('Asia/Kathmandu'));
+                                $model->created_time = $date->format('Y-m-d H:i:s');
 				$model->update();
+                                $update_Time = $date->format('h:i a');
+                                array_push($data, array('id'=>$i, 'time'=>$update_Time));
 			}
 		}
-		return $a;
+		return $data;
 	}
 
 	public function actionRemoveCheckedTime(){

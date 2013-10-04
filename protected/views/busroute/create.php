@@ -76,10 +76,6 @@
 
         $('.chk').click(function() {
             var clicked_value = $(this).val();
-          //  var date_now = '<?php echo date('Y-m-d H:i:s'); ?>';
-           // var d = new Date(); // for now
-           // var tim = d.getHours()+':'+d.getMinutes()+':'+d.getSeconds(); 
-
             $('#loading').css('display', '');
             if ($(this).is(':checked')) {
                 $(this).prop('checked', false);
@@ -92,46 +88,48 @@
     });
 
     function getValue(data_id) {
-        var checkbox = $('#route_chk_' + data_id);
-        if (checkbox.is(':checked') === false) {
-            var value = $('#route_chk_' + data_id).val();
-            //console.log(value);
-            var route_id = $('#bus_route').val();
-            
-         //   console.log(date_now);
-            $.ajax({
-                type: 'POST',
-                url: baseurl + '/busroute/addCheckedTime',
-                data: {value: value, route_id: route_id},
-                dataType: 'json',
-                success: function(response) {
+       
+      var checkbox = $('#route_chk_' + data_id);
+      if (checkbox.is(':checked') === false) {
+          var value = $('#route_chk_' + data_id).val();
+          //console.log(value);
+          var route_id = $('#bus_route').val();
+         // var date_now = '<?php //echo date('h:i a', strtotime());?>';
+          
+          //date('h:i A',strtotime(time()))
+          
+          $.ajax({
+              type: 'POST',
+              url: baseurl + '/busroute/addCheckedTime',
+              data: {value: value, route_id: route_id},
+              dataType: 'json',
+              success: function(response) {
+                 $('#loading').css('display', 'none');
+                  $.each(response, function(index, order) {
+                      $('#route_chk_' + response[index]['id']).prop('checked', true);
+                      $('#place_' + response[index]['id'] + ' a').removeClass('default');
+                      $('#place_' + response[index]['id'] + ' a').addClass('oncheck');
+                      $('#place_' + response[index]['id'] + ' em').text(response[index]['time']);
+                      
+                  });
+              }
+          });
+      } else {
+          var value = checkbox.val();
+          $.ajax({
+              type: 'POST',
+              url: baseurl + '/busroute/removeCheckedTime',
+              data: {value: value},
+              dataType: 'json',
+              success: function(response) {
+                  $.each(response, function(index, order) {
                     $('#loading').css('display', 'none');
-                    $.each(response.id, function(index, order) {
-                     //   if($(this).is(':checked') === false){
-                        $('#route_chk_' + order).prop('checked', true);
-                        $('#place_' + order + ' a').removeClass('default');
-                        $('#place_' + order + ' a').addClass('oncheck');
-                        $('#place_' + order + ' em').text(response.dat);
-                  // }
-                    });
-                }
-            });
-        } else {
-            var value = checkbox.val();
-            $.ajax({
-                type: 'POST',
-                url: baseurl + '/busroute/removeCheckedTime',
-                data: {value: value},
-                dataType: 'json',
-                success: function(response) {
-                    $('#loading').css('display', 'none');
-                    $.each(response, function(index, order) {
-                        $('#route_chk_' + order).prop('checked', false);
-                        $('#place_' + order + ' a').removeClass('oncheck');
-                        $('#place_' + order + ' a').addClass('default');
-                    });
-                }
-            });
-        }
-    }
+                      $('#route_chk_' + order).prop('checked', false);
+                      $('#place_' + order + ' a').removeClass('oncheck');
+                      $('#place_' + order + ' a').addClass('default');
+                  });
+              }
+          });
+      }
+  }
 </script>
