@@ -1,3 +1,4 @@
+<?php date_default_timezone_set('Asia/Kathmandu');?>
 <section>
     <div class="btn-wrap checkout">
         <?php echo CHtml::link("Check Out", array('../'), array('class' => 'checkin ui-link')); ?>
@@ -12,6 +13,8 @@
             <p class="heading"><?php echo $bus_route->route_name; ?></p>
             <div class="sets places-wrap">
                 <p style="font-size:16px"><strong>Check In at your Stop</strong></p><br/>
+                <div><span id="loading" style="display:none"><img src="<?php echo Yii::app()->request->baseurl;?>/media/images/loading.gif"/></span></div>
+                <br/>
                 <?php date_default_timezone_set('Asia/Kathmandu'); ?>
                 <?php
                 if (isset($_GET) && !empty($_GET)) {
@@ -33,7 +36,7 @@
                                            // echo $value->created_time;
                                         }
                                         ?>/>
-                                        <em><?php echo date('h:i A',strtotime(time())); ?></em>
+                                        <em><?php echo date('Y-m-d H:i:s'); ?></em>
                                     </li>
                                 </ul> 
                             </a>
@@ -44,7 +47,7 @@
                                     <li>
         <?php echo ucfirst($value->stop_name); ?>
                                         <input type = "checkbox" class="chk" name="route_chk[]" id="<?php echo "route_chk_" . $value->id ?>" value="<?php echo $value->id; ?>"/>
-                                        <em><?php echo date('h:i A',strtotime(time())); ?></em>
+                                        <em><?php echo date('Y-m-d H:i:s'); ?></em>
                                     </li>
                                 </ul> 
                             </a>
@@ -67,11 +70,13 @@
         baseurl = $('#url').val();
         $('.place-checkin').click(function() {
             var data_id = $(this).attr('data-id');
+            $('#loading').css('display', '');
             getValue(data_id);
         });
 
         $('.chk').click(function() {
             var clicked_value = $(this).val();
+            $('#loading').css('display', '');
             if ($(this).is(':checked')) {
                 $(this).prop('checked', false);
             } else {
@@ -88,14 +93,15 @@
             var value = $('#route_chk_' + data_id).val();
             //console.log(value);
             var route_id = $('#bus_route').val();
-            var date_now = '<?php echo date('h:i A',strtotime(time()))//echo date('Y-m-d H:i:s'); ?>';
-            
+            var date_now = '<?php echo date('Y-m-d H:i:s'); ?>';
+            //alert(date_now);
             $.ajax({
                 type: 'POST',
                 url: baseurl + '/busroute/addCheckedTime',
                 data: {value: value, route_id: route_id},
                 dataType: 'json',
                 success: function(response) {
+                    $('#loading').css('display', 'none');
                     $.each(response, function(index, order) {
                         $('#route_chk_' + order).prop('checked', true);
                         $('#place_' + order + ' a').removeClass('default');
@@ -112,6 +118,7 @@
                 data: {value: value},
                 dataType: 'json',
                 success: function(response) {
+                    $('#loading').css('display', 'none');
                     $.each(response, function(index, order) {
                         $('#route_chk_' + order).prop('checked', false);
                         $('#place_' + order + ' a').removeClass('oncheck');
