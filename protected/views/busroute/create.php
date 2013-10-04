@@ -12,6 +12,7 @@
             <div class="sets places-wrap">
             <p style="font-size:16px"><strong>Check In at your Stop</strong></p><br/>
             <div><span id="loading" style="display:none"><img src="<?php echo Yii::app()->request->baseurl;?>/media/images/loading.gif"/></span></div>
+            <br/>
             <?php
             if(isset($_GET) && !empty($_GET)){
                 $criteria = new CDbCriteria();
