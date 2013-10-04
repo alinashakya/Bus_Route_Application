@@ -11,6 +11,7 @@
             <p class="heading"><?php echo $bus_route->route_name;?></p>
             <div class="sets places-wrap">
             <p style="font-size:16px"><strong>Check In at your Stop</strong></p><br/>
+            <div><span id="loading" style="display:none"><img src="<?php echo Yii::app()->request->baseurl;?>/media/images/loading.gif"/></span></div>
             <?php
             if(isset($_GET) && !empty($_GET)){
                 $criteria = new CDbCriteria();
@@ -58,6 +59,7 @@ $(document).ready(function() {
     baseurl = $('#url').val();
     $('.place-checkin').click(function(){
         var data_id = $(this).attr('data-id');
+        $('#loading').css('display', '');
         getValue(data_id);
     });
 
@@ -85,8 +87,8 @@ function getValue(data_id){
             data: {value: value,route_id:route_id},
             dataType: 'json',
             success: function(response) {
+                $('#loading').css('display', 'none');
                 $.each(response, function(index, order) {
-                    //console.log(('#place_'+order+ ' a em'));
                     $('#route_chk_'+order).prop('checked',true);
                     $('#place_'+order+' a').removeClass('default');
                     $('#place_'+order+' a').addClass('oncheck');
@@ -101,6 +103,7 @@ function getValue(data_id){
             data: {value: value},
             dataType: 'json',
             success: function(response) {
+                $('#loading').css('display', 'none');
                 $.each(response, function(index, order) {
                     $('#route_chk_'+order).prop('checked',false);
                     $('#place_'+order+' a').removeClass('oncheck');
