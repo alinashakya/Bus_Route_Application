@@ -171,7 +171,6 @@ section .places-wrap .place-checkin a.clickable-place {
 	display: block;
 	color: #191919;
 	line-height: 30px;
-	padding: 0 0 0 10px;
 }
 
 section .places-wrap .place-checkin a.clickable-place em{
@@ -193,6 +192,16 @@ section .places-wrap .place-checkin a.oncheck:hover {
 	background: -webkit-linear-gradient(#6f6e7a, #585765);
 	background: linear-gradient(#6f6e7a, #585765);
 }
+.clickable-place.oncheck  ul li{
+	float: left;
+	width: 100%;
+	background: -webkit-linear-gradient(#6f6e7a, #585765);
+	background: linear-gradient(#6f6e7a, #585765);
+}
+
+
+
+
 footer p {
 	text-align: center;
 	color: #fff;
@@ -224,6 +233,7 @@ footer p {
 .ui-checkbox{
 
 	float: left;
+	margin: 0 0 0 10px;
 }
 
 .ui-checkbox input, .ui-radio input{
@@ -268,6 +278,8 @@ footer p {
 .ui-loader{
 	display: none !important;
 }
+
+.
 
 /*===================================Media Queries=============================*/
 @media all and (-webkit-min-device-pixel-ratio: 2) {
