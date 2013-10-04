@@ -36,7 +36,7 @@
                                            // echo $value->created_time;
                                         }
                                         ?>/>
-                                        <em><?php echo date('Y-m-d H:i:s'); ?></em>
+                                        <em><?php echo $value->created_time;?></em>
                                     </li>
                                 </ul> 
                             </a>
@@ -47,7 +47,7 @@
                                     <li>
         <?php echo ucfirst($value->stop_name); ?>
                                         <input type = "checkbox" class="chk" name="route_chk[]" id="<?php echo "route_chk_" . $value->id ?>" value="<?php echo $value->id; ?>"/>
-                                        <em><?php echo date('Y-m-d H:i:s'); ?></em>
+                                        <em><?php echo $value->created_time;?></em>
                                     </li>
                                 </ul> 
                             </a>
@@ -76,6 +76,10 @@
 
         $('.chk').click(function() {
             var clicked_value = $(this).val();
+          //  var date_now = '<?php echo date('Y-m-d H:i:s'); ?>';
+           // var d = new Date(); // for now
+           // var tim = d.getHours()+':'+d.getMinutes()+':'+d.getSeconds(); 
+
             $('#loading').css('display', '');
             if ($(this).is(':checked')) {
                 $(this).prop('checked', false);
@@ -93,8 +97,8 @@
             var value = $('#route_chk_' + data_id).val();
             //console.log(value);
             var route_id = $('#bus_route').val();
-            var date_now = '<?php echo date('Y-m-d H:i:s'); ?>';
-            //alert(date_now);
+            
+         //   console.log(date_now);
             $.ajax({
                 type: 'POST',
                 url: baseurl + '/busroute/addCheckedTime',
@@ -102,11 +106,13 @@
                 dataType: 'json',
                 success: function(response) {
                     $('#loading').css('display', 'none');
-                    $.each(response, function(index, order) {
+                    $.each(response.id, function(index, order) {
+                     //   if($(this).is(':checked') === false){
                         $('#route_chk_' + order).prop('checked', true);
                         $('#place_' + order + ' a').removeClass('default');
                         $('#place_' + order + ' a').addClass('oncheck');
-                        $('#place_' + order + ' em').text(date_now);
+                        $('#place_' + order + ' em').text(response.dat);
+                  // }
                     });
                 }
             });

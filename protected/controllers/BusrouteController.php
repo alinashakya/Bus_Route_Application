@@ -197,14 +197,17 @@ class BusrouteController extends Controller
 	}*/
 
 	public function actionAddCheckedTime(){
+		date_default_timezone_set('Asia/Kathmandu');
 		$value = $_POST['value'];
 		$route_id = $_POST['route_id'];
 		$checkId = $this->checkValue($value,$route_id);
-		 echo json_encode($checkId);
+		$var = array('id'=>$checkId, 'dat'=>date('Y-m-d H:i:s'));
+		 echo json_encode($var);
     }
 
 	public function checkValue($val,$route){
 		date_default_timezone_set('Asia/Kathmandu');
+		$a = array();
 		for($i = $val; $i >= 1 ; $i--){
 			$model = BusStop::model()->findByAttributes(array('id' => $i));
 			//print_r($model->attributes);
