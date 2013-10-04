@@ -201,7 +201,7 @@ class BusrouteController extends Controller
 		$value = $_POST['value'];
 		$route_id = $_POST['route_id'];
 		$checkId = $this->checkValue($value,$route_id);
-		$var = array('id'=>$checkId, 'dat'=>date('Y-m-d H:i:s'));
+		$var = array('id'=>$checkId,'dat'=>date('h:i:A'));
 		 echo json_encode($var);
     }
 

@@ -36,7 +36,7 @@
                                            // echo $value->created_time;
                                         }
                                         ?>/>
-                                        <em><?php echo $value->created_time;?></em>
+                                        <em><?php echo date('h:i A', strtotime($value->created_time));?></em>
                                     </li>
                                 </ul> 
                             </a>
@@ -47,7 +47,7 @@
                                     <li>
         <?php echo ucfirst($value->stop_name); ?>
                                         <input type = "checkbox" class="chk" name="route_chk[]" id="<?php echo "route_chk_" . $value->id ?>" value="<?php echo $value->id; ?>"/>
-                                        <em><?php echo $value->created_time;?></em>
+                                        <em><?php echo date('h:i A', strtotime($value->created_time));?></em>
                                     </li>
                                 </ul> 
                             </a>
