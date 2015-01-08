@@ -13,15 +13,6 @@ class MapController extends Controller
 		return $this->render('index');
 	}
 
-	public function actionDMStoDEC($deg, $min, $sec)
-	{
-		die('test');
-// Converts DMS ( Degrees / minutes / seconds )
-// to decimal format longitude / latitude
-
-		return $deg + ((($min * 60) + ($sec)) / 3600);
-	}
-
 	public function actionChangedmstolatitude()
 	{
 		$deg = 27;
