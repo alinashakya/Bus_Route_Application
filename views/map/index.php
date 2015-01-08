@@ -25,7 +25,6 @@
 	}
 
 </script>
-<?php die('hey'); ?>
 <body onload="initialize()">
 	<div id="map" style="width:1000px; height:600px">
 		<div id="map_canvas" style="width:100%; height:100%"></div>
